@@ -123,7 +123,8 @@
 
 
           <!-- OUR MISSION -->
-          <section class="SIBAN_our_mission section-p1">
+          <section class="SIBAN_our_mission section-p1" >
+              <!-- <div class="SIBAN_our_mission_background" style="background-image: url('images/shadow.png');"></div> -->
               <marquee behavior="scroll" direction="right">
                 <img src="images/Trusted_Logos.png" alt="Org_logo">
             </marquee>
@@ -200,7 +201,7 @@
                           <!-- BUTTON -->
                           <div class="SIBAN_bUTTON" >
                             <!-- New unordered list for "Get Started" -->
-                            <ul class="menu_1" data-aos="fade-in" data-aos-delay="700">
+                            <ul class="menu_1" >
                                 <li><a href="store.html">Store</a></li>
                                 <li><a href="consultation.html">Free Consultation</a></li>
                             </ul>
@@ -211,7 +212,7 @@
 
             <!-- EXPLORE OUR PROJECTS -->
             <div class="SIBAN_explore_projects section-p1"></div>
-                  <div class="SIBAN_explore_content" data-aos="zoom-in" data-aos-duration="1000">
+                  <div class="SIBAN_explore_content" >
                     <h3>Explore our projects</h3>
                     <p>At SIBAN, we're actively involved in projects that drive blockchain adoption 
                         and innovation in Nigeria. Here are some of the key initiatives we're currently working on:</p>
@@ -219,7 +220,7 @@
                  
                 <!-- BUTTON -->
                 <div class="SIBAN_bUTTON" >
-                  <ul class="menu_1" data-aos="fade-in">
+                  <ul class="menu_1" >
                       <li><a href="what_we_do.html"  style="background-color: #fff; color: #005DAE;">View all projects</a></li>
                   </ul>
               </div>
@@ -305,14 +306,96 @@
 
         </div>
 
-
-
-
       </section>
 
-          
-          
-        </header>
+
+          <!-- FAQ -->
+          <section class="SIBAN_main" style="background-image: url(images/Mask.png);">
+            <div class="SIBAN_faq section-p1">
+                <div class="SIBAN_faq_header">
+                    <h4>Frequently Asked Questions</h4>
+                    <p>Need help with something? Here are our most frequently asked questions.</p>
+                </div>
+              <div class="SIBAN_faq_search">
+                <span class="search-icon"><i class="fas fa-search"></i></span>
+                <input type="text" id="searchInput" placeholder="Search...">
+            </div>
+
+                <div class="siban">
+                    <div class="siban-item">
+                        <div class="siban-header">
+                            What is SIBAN, and what does it stand for?
+                            <i class="fas fa-chevron-down icon"></i>
+                        </div>
+                        <div class="siban-content">
+                            <h3>Who can become a member of SIBAN? </h3>
+                            <p> Any individual or organization with an interest in blockchain technology and its applications in Nigeria can become a member of SIBAN. Whether you're a blockchain enthusiast, developer, entrepreneur, investor, or policymaker, you're welcome to join us.</p>
+                        </div>
+                    </div>
+                    <div class="siban-item">
+                        <div class="siban-header">
+                            What are the benefits of joining SIBAN as a member?
+                            <i class="fas fa-chevron-down icon"></i>
+                        </div>
+                        <div class="siban-content">
+                            <p> Whether you're a blockchain enthusiast, developer, entrepreneur, investor, or policymaker, you're welcome to join us.</p>
+                        </div>
+                    </div>
+                    <div class="siban-item">
+                        <div class="siban-header">
+                            How does SIBAN contribute to blockchain education in Nigeria?
+                            <i class="fas fa-chevron-down icon"></i>
+                        </div>
+                        <div class="siban-content">
+                            <p> You're a blockchain enthusiast, developer, entrepreneur, investor, or policymaker, you're welcome to join us.</p>
+                        </div>
+                    </div>
+
+                    <div class="siban-item">
+                        <div class="siban-header">
+                            How does SIBAN advocate for blockchain regulations?
+                            <i class="fas fa-chevron-down icon"></i>
+                        </div>
+                        <div class="siban-content">
+                            <p> You're a blockchain enthusiast, developer, entrepreneur, investor, or policymaker, you're welcome to join us.</p>
+                        </div>
+                    </div>
+
+                    <div class="siban-item">
+                        <div class="siban-header">
+                          What kind of support does SIBAN offer to blockchain startups?
+                            <i class="fas fa-chevron-down icon"></i>
+                        </div>
+                        <div class="siban-content">
+                            <p> You're a blockchain enthusiast, developer, entrepreneur, investor, or policymaker, you're welcome to join us.</p>
+                        </div>
+                    </div>
+
+                    <div class="siban-item">
+                        <div class="siban-header">
+                          How can I stay updated on SIBAN's activities and events?
+                            <i class="fas fa-chevron-down icon"></i>
+                        </div>
+                        <div class="siban-content">
+                            <p> You're a blockchain enthusiast, developer, entrepreneur, investor, or policymaker, you're welcome to join us.</p>
+                        </div>
+                    </div>
+
+                    
+                </div>
+
+                <!-- BUTTON -->
+                <div class="SIBAN_bUTTON" >
+                  <ul class="menu_1" >
+                      <li><a href="#"  style="background-color: #fff; color: #005DAE;">Show more FAQ</a></li>
+                  </ul>
+              </div>
+                
+                <div id="searchMessage" style="display: none;">Search not available</div>
+            </div>
+          </section>
+
+ </header>
 
 
         
@@ -380,31 +463,32 @@
       </script>
 
 <script>
-    let mybutton = document.getElementById("myButton");
-    let newsletterModal = document.getElementById("newsletterModal");
+  document.addEventListener('DOMContentLoaded', function () {
+    if (window.innerWidth <= 450) {
+      const infoDivs = document.querySelectorAll('.SIBAN_rules_info');
+      let currentSlide = 0;
 
-    setInterval(function () {
-      mybutton.style.display = "block";
-      setTimeout(function () {
-        mybutton.style.display = "none";
-      }, 10000); // 10 seconds
-    }, 13000); // 13 seconds (10 seconds + 3 seconds)
+      function showSlide(n) {
+        infoDivs.forEach(div => div.style.display = 'none');
+        infoDivs[n].style.display = 'block';
+      }
 
-    function openNewsletterModal() {
-      newsletterModal.style.display = "flex";
+      function nextSlide() {
+        currentSlide = (currentSlide + 1) % infoDivs.length;
+        showSlide(currentSlide);
+      }
+
+      function prevSlide() {
+        currentSlide = (currentSlide - 1 + infoDivs.length) % infoDivs.length;
+        showSlide(currentSlide);
+      }
+
+      showSlide(currentSlide);
+
+      // Change slide every 2 seconds
+      setInterval(nextSlide, 4000);
     }
-
-    function closeNewsletterModal() {
-      newsletterModal.style.display = "none";
-    }
-
-
-    // document.querySelector('form').addEventListener('submit', function (event) {
-    //   event.preventDefault();
-    //   // Add your form submission logic here
-    //   alert('Thank you for subscribing!');
-    //   closeNewsletterModal();
-    // });
+  });
   </script>
 
 

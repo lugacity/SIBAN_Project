@@ -49,7 +49,8 @@
     }
 
     p{
-        font-size: 18px;
+        font-size: clamp(1rem, 3vw, 1.1rem);
+        font-weight: 400;
         margin: 15px 0 20px 0;
         /* --animation-delay: 500ms */
     }
@@ -176,9 +177,6 @@
         transform: translateY(-8px) rotate(-45deg);
     }
 
-    .start_ss{
-        background-color: var(--main-color);
-    }
 
     /* =============== BLOCKCHAIN ADOPTION ============== */
     .siban_blockhain_adoption {
@@ -490,6 +488,124 @@
     }
 
 
+
+    /* =============== FAQ ============== */
+    .SIBAN_main{
+        padding: 2rem 0rem;
+        background-size: cover; 
+        background-color: #0073D7;
+        color: #fff;
+    }
+
+    .SIBAN_main .SIBAN_bUTTON{
+        margin: 1rem 0rem;
+    }
+
+    .SIBAN_faq{
+        max-width: 850px;
+        margin: auto;
+    }
+
+    .SIBAN_faq_header{
+        text-align: center;
+
+        & p{
+            font-size: 1rem;
+        }
+
+        & h4{
+            font-size: clamp(10px, 6vw, 34px);
+            line-height: 0.5;
+            color: #fff;
+        }
+    }
+
+    .SIBAN_faq_search {
+        position: relative;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    
+    .SIBAN_faq_search input[type="text"] {
+        width: calc(80% - 30px);
+        padding: 15px;
+        padding-left: 40px; 
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        outline: none;
+        font-size: 16px;
+        box-sizing: border-box;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .search-icon {
+        position: absolute;
+        left: 100px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    .search-icon i {
+        font-size: 18px;
+        color: #666;
+    }
+    
+    .siban-content {
+        display: none;
+    }
+
+    .siban-content p{
+        text-align: justify;
+    }
+
+    .siban-content h3{
+        font-size: 1rem;
+    }
+
+    .siban-header {
+        font-weight: 600;
+        cursor: pointer;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+        position: relative;
+    }
+
+    .siban-item{
+        padding: .5rem 0rem;
+    }
+
+    .siban-header .icon {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        transition: transform 0.3s ease;
+    }
+
+    .siban-item.active .siban-header .icon {
+        transform: translateY(-50%) rotate(180deg);
+    }
+
+    .siban-content {
+        padding: 10px;
+    }
+
+    #searchMessage {
+        color: red;
+        margin-top: 10px;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     @keyframes rotateImage {
         from {
@@ -752,13 +868,11 @@
 
     /*======= MISSION, VISSION  ====== */
     .SIBAN_our_mission_content{
-        max-width: 80%;
+        max-width: 100%;
     }
 
     .SIBAN_our_mission marquee{margin-bottom: 1rem}
-
     .SIBAN_rules_flex{display: grid}
-
     .SIBAN_rules{padding: 2rem 0rem}
 
     /* =============== TRANSPARENCY ============== */
@@ -776,10 +890,21 @@
       }
       
     .SIBAN_transparency_img img{width: 350px}
-
     .SIBAN_transparency_content h2{font-size: 2.5rem}
-
     .SIBAN_transparency_content p{font-size: 1rem}
+
+     /* =============== EXPLORE OUR PROJECTS ============== */
+     .SIBAN_explore_content{
+        max-width: 90%;
+    }
+
+     /* =============== SIBAN BLOCKCHAIN EDUCATION INITIATIVES ============== */
+    .SIBAN_blockchain_edu{margin-top: 1rem}
+    .SIBAN_blockchain_info{padding: 0rem}
+    .SIBAN_blockchain_content_1 h4{font-size: 1rem}
+    .SIBAN_blockchain_content_1{top: 160px}
+    .SIBAN_blockchain_content_1::before{top: 5}
+    .SIBAN_blockchain_flex{gap: 2rem}
 
 }
 
@@ -787,9 +912,7 @@
 
 @media only screen and (max-width: 450px) {
 
-    .menu_1 li a{
-        padding: .8rem;
-    }
+    .menu_1 li a{padding: .8rem}
 
      /*======= NEWSLETTER  ====== */
     .newsletter_siban {
@@ -803,17 +926,10 @@
     }
 
     /*======= BLOCKCHAIN ADOPTION  ====== */
-    .siban_blockhain_body{
-        max-width: 100%;
-    }
-    .SIBAN_rotator img {
-        width: 80%;
-    }
-
-    .siban_blockhain_content_1 h2 {        
-        text-transform: uppercase;
-    }
-
+    .siban_blockhain_body{max-width: 100%}
+    .SIBAN_rotator img {width: 80%}
+    .siban_blockhain_content_1 h2 {text-transform: uppercase}
+    .SIBAN_percentage_category {animation: marquee 20s linear infinite}
 
     .SIBAN_percentage {
         overflow: hidden; 
@@ -821,22 +937,20 @@
         position: relative; 
       }
     
-    .SIBAN_percentage_category {
-        /* display: flex;  */
-        animation: marquee 20s linear infinite; 
-    }
 
     
     /*======= MISSION, VISSION  ====== */
     .SIBAN_our_mission_content,
-    .SIBAN_explore_content{
-        max-width: 100%;
-    }
+    .SIBAN_explore_content{max-width: 100%}
+    .SIBAN_our_mission_content p{text-align: justify}
+    .SIBAN_rules_flex{display: block}
 
-    .SIBAN_our_mission_content p{text-align: justify;}
 
     /* =============== TRANSPARENCY ============== */
     .SIBAN_transparency_flex{margin-top: 2rem}
+    .SIBAN_transparency_img img{display: none;}
+    .SIBAN_transparency_content h2{font-size: 1.5rem}
+    .SIBAN_transparency_content p{text-align: justify}
 
     .SIBAN_transparency_flex::before {
         top: 10px;
@@ -845,10 +959,24 @@
         height: 30%;
       }
 
-    .SIBAN_transparency_img img{display: none;}
-    .SIBAN_transparency_content h2{font-size: 1.5rem}
-    .SIBAN_transparency_content p{text-align: justify;}
+    /* =============== SIBAN BLOCKCHAIN EDUCATION INITIATIVES ============== */   
+    .SIBAN_blockchain_info{padding-top: 2rem}
+    .SIBAN_blockchain_content_1{top: 160px}
+    .SIBAN_blockchain_flex{
+        display: block;
+        gap: 3rem;
+    }
 
+    /* =============== FAQ ============== */   
+    .SIBAN_faq_search input[type="text"] {width: calc(100% - 30px)}
+    .search-icon {left: 30px}
+
+
+
+
+
+
+    
     
       @keyframes marquee {
         0% { transform: translateX(100%); } 
