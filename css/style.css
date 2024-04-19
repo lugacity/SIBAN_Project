@@ -597,9 +597,44 @@
     }
     
     
-    
-    
-    
+    /* =============== BECOME A CORPORATE MEMBER ============== */
+    .SIBAN_corporate{
+        background-color: #0073D7;
+        padding: 12rem 4rem;
+    }
+    .SIBAN_corporate_background{
+        /* margin-top: 8rem; */
+        padding: 2rem 5rem;
+        text-align: center;
+        color: #fff;
+        position: relative;
+        z-index: 1;
+    }
+
+    .SIBAN_corporate_background::before {
+        content: '';
+        position: absolute;
+        top: -90px;
+        left: 100px;
+        width: 90%;
+        height: 400px;
+        background-color: #fff;
+        border-radius: 3rem;
+        background-size: cover;
+        opacity: 0.2;
+        z-index: -1;
+        transform: rotate(173deg); 
+      }
+
+      .SIBAN_corporate_background h3{
+        font-size: 2.5rem; 
+      }
+
+      .SIBAN_corporate .menu_1{
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+      }
     
     
     
@@ -631,7 +666,8 @@
     /* =============== Footer ============== */
     /* Footer Styles */
     .footer_siban {
-        background-color: #f8f8f8;
+        /* background-color: #f8f8f8; */
+        color: #fff;
     }
 
     .get_in_touch {
@@ -642,17 +678,19 @@
 
     /*======= GET IN TOUCH USING NESTING PROPERTY ====== */
     .get_in_touch_info {
-
+        
         & h4 {
             /* font-size: 24px;
             color: #333; */
             margin-bottom: 15px;
+            color: #fff;
         }
 
         & p {
             font-size: 16px;
             color: #666;
             text-align: justify;
+            color: #fff;
         }
     }
 
@@ -660,7 +698,6 @@
 
         & label {
             font-size: 16px;
-            color: #333;
             margin-bottom: 5px;
             display: block;
         }
@@ -674,7 +711,7 @@
             padding: 20px 10px;
             margin-bottom: 15px;
             border: none; 
-            background-color: #f8f8f8;
+            background-color: transparent;
             border-bottom: 2px solid #ccc; 
             transition: border-bottom-color 0.3s ease; 
         }
@@ -689,7 +726,8 @@
         &   input[type="text"]::placeholder,
             input[type="email"]::placeholder,
             input[type="number"]::placeholder {
-            color: #999; /* Placeholder text color */
+            color: #fff; /* Placeholder text color */
+            opacity: 0.4;
             transition: transform 0.3s ease; /* Add transition for transform property */
             transform-origin: left bottom; /* Set transform origin to bottom left */
         }
@@ -697,7 +735,8 @@
         &   input[type="text"]:focus::placeholder,
             input[type="email"]:focus::placeholder,
             input[type="number"]:focus::placeholder {
-            color: #555; /* Placeholder text color when input is focused */
+                color: #fff; 
+                /* opacity: 0.3; */
             transform: translateY(-100%); /* Move placeholder text upwards */
         }
 
@@ -719,25 +758,23 @@
 
 
    /*======= NEWSLETTER  ====== */
-
     .newsletter_siban {
         display: flex;
         align-items: center;
         justify-content: space-between;
         border-bottom: 1px solid #ccc; 
         margin-bottom: 30px;
-        /* background-color: rebeccapurple; */
         padding: 4rem 0rem 2rem 0rem;
 
         & h4 {
             font-size: 20px;
-            color: #333;
+            color: #fff;
             margin-bottom: 10px;
         }
 
         & p {
             font-size: 16px;
-            color: #666;
+            /* color: #666; */
             text-align: justify;
         }
     }
@@ -779,6 +816,45 @@
         }
     }
 
+    /*======= FOOTER STYLING  ====== */
+    .SIBAN_footer_flex {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap; 
+    }
+
+    .SIBAN_footer_link {
+        margin-bottom: 20px;
+        flex: 1 0 5%; 
+    }
+
+    .SIBAN_footer_link p {
+        font-weight: bold;
+        color: #cfcfcf;
+        line-height: 0;
+    }
+
+    .SIBAN_footer_li {
+        list-style: none;
+        padding: 0;
+    }
+
+    .SIBAN_footer_li li {
+        margin-bottom: 5px;
+    }
+
+    .SIBAN_footer_li li a {
+        /* color: #333; */
+        text-decoration: none;
+        line-height: 2;
+    }
+
+    .SIBAN_footer_li li a:hover {
+        color: #cfcfcf;
+    }
+
+
+
 
   /* CSS code for responsive menu */
   @media only screen and (max-width: 1100px) {
@@ -799,7 +875,7 @@
         display: none;
         flex-direction: column;
         align-items: center;
-        margin: 2rem 0rem 0rem -4rem;
+        margin: 2rem 0rem 3rem -4rem;
     }
 
     .menu li {
@@ -906,6 +982,27 @@
     .SIBAN_blockchain_content_1::before{top: 5}
     .SIBAN_blockchain_flex{gap: 2rem}
 
+
+    /* =============== BECOME A CORPORATE MEMBER ============== */
+    .SIBAN_corporate{
+        background-color: #0073D7;
+        padding: 6rem 0rem;
+    }
+    .SIBAN_corporate_background{
+        /* margin-top: 8rem; */
+        padding: 2rem 5rem;
+    }
+
+    .SIBAN_corporate_background::before {
+        top: -30px;
+        left: 50px;
+        width: 90%;
+        height: 300px; 
+      }
+
+      .SIBAN_corporate_background h3{font-size: 1.8rem}
+      .SIBAN_corporate .menu_1{margin-top: 0rem}
+
 }
 
 
@@ -913,6 +1010,9 @@
 @media only screen and (max-width: 450px) {
 
     .menu_1 li a{padding: .8rem}
+    nav .menu_1{
+        display: none;
+    }
 
      /*======= NEWSLETTER  ====== */
     .newsletter_siban {
@@ -926,6 +1026,9 @@
     }
 
     /*======= BLOCKCHAIN ADOPTION  ====== */
+    .siban_blockhain_adoption .menu_1{display: block;}
+    .menu_1 li{margin-bottom: 2.5rem}
+    .menu_1 li:nth-of-type(1) a{padding: 1rem 3rem}
     .siban_blockhain_body{max-width: 100%}
     .SIBAN_rotator img {width: 80%}
     .siban_blockhain_content_1 h2 {text-transform: uppercase}
@@ -936,8 +1039,6 @@
         white-space: nowrap;
         position: relative; 
       }
-    
-
     
     /*======= MISSION, VISSION  ====== */
     .SIBAN_our_mission_content,
@@ -972,7 +1073,32 @@
     .search-icon {left: 30px}
 
 
+    /* =============== BECOME A CORPORATE MEMBER ============== */
+    .SIBAN_corporate{
+        background-color: #0073D7;
+        padding: 4rem 0rem;
+    }
+    .SIBAN_corporate_background{
+        /* margin-top: 8rem; */
+        padding: 1rem;
+    }
 
+    .SIBAN_corporate_background::before {
+        top: 5px;
+        left: 20px;
+        width: 90%;
+        height: 100px;
+        transform: rotate(173deg); 
+      }
+
+    .SIBAN_corporate_background h3{font-size: 1.5rem}
+    /* .SIBAN_corporate .menu_1{display: block;} */
+
+    
+    /*======= FOOTER STYLING  ====== */
+    .SIBAN_footer_link {
+        flex-basis: 45%; /* Each section takes up 100% of the container width */
+    }
 
 
 
