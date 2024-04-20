@@ -601,9 +601,12 @@
     .SIBAN_corporate{
         background-color: #0073D7;
         padding: 12rem 4rem;
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat; 
     }
+
     .SIBAN_corporate_background{
-        /* margin-top: 8rem; */
         padding: 2rem 5rem;
         text-align: center;
         color: #fff;
@@ -719,45 +722,44 @@
         &   input[type="text"]:focus,
             input[type="email"]:focus,
             input[type="number"]:focus {
-            border-bottom-color: #0073D7; /* Change bottom border color when focused */
-            outline: none; /* Remove default focus outline */
+                border-bottom-color: #0073D7; /* Change bottom border color when focused */
+                outline: none; /* Remove default focus outline */
         }
 
         &   input[type="text"]::placeholder,
             input[type="email"]::placeholder,
             input[type="number"]::placeholder {
-            color: #fff; /* Placeholder text color */
-            opacity: 0.4;
-            transition: transform 0.3s ease; /* Add transition for transform property */
-            transform-origin: left bottom; /* Set transform origin to bottom left */
+                color: #fff; /* Placeholder text color */
+                opacity: 0.4;
+                transition: transform 0.3s ease; /* Add transition for transform property */
+                transform-origin: left bottom; /* Set transform origin to bottom left */
         }
     
         &   input[type="text"]:focus::placeholder,
             input[type="email"]:focus::placeholder,
             input[type="number"]:focus::placeholder {
                 color: #fff; 
-                /* opacity: 0.3; */
-            transform: translateY(-100%); /* Move placeholder text upwards */
+                transform: translateY(-100%); 
         }
 
         &   button {
-            padding: 10px 20px;
-            background-color: #0073D7;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
+                padding: 10px 20px;
+                background-color: #0073D7;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 16px;
         }
     
         &   button:hover {
-            background-color: #005ea8;
+                background-color: #005ea8;
         }
 
     }
 
 
-   /*======= NEWSLETTER  ====== */
+   /*== NEWSLETTER  === */
     .newsletter_siban {
         display: flex;
         align-items: center;
@@ -816,11 +818,12 @@
         }
     }
 
-    /*======= FOOTER STYLING  ====== */
+    /*== FOOTER STYLING  == */
     .SIBAN_footer_flex {
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap; 
+        border-bottom: 1px solid #ccc; 
     }
 
     .SIBAN_footer_link {
@@ -843,6 +846,10 @@
         margin-bottom: 5px;
     }
 
+    .SIBAN_footer_bottom .SIBAN_footer_li{
+        display: flex;
+    }
+
     .SIBAN_footer_li li a {
         /* color: #333; */
         text-decoration: none;
@@ -853,6 +860,48 @@
         color: #cfcfcf;
     }
 
+
+    /*== FOOTER BOTTOM  === */
+    .SIBAN_footer_bottom {
+        /* background-color: #333; */
+        color: #fff;
+        padding: 30px 0px;
+    }
+
+    .SIBAN_footer_bottom_flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .SIBAN_footer_bottom_logo img {
+        max-width: 100px;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .SIBAN_footer_bottom_logo p {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .SIBAN_footer_bottom_social_link .social-icon {
+        color: #fff;
+        text-decoration: none;
+        font-size: 20px;
+        margin-right: 10px;
+        background-color: #fff;
+        color: #005DAE;
+        border-radius: 100%;
+        display: inline-block;
+        padding: 8px 13px;
+    }
+
+    
+
+    .SIBAN_footer_bottom_social_link .social-icon:hover {
+        opacity: 0.7;
+    }
 
 
 
@@ -1010,9 +1059,7 @@
 @media only screen and (max-width: 450px) {
 
     .menu_1 li a{padding: .8rem}
-    nav .menu_1{
-        display: none;
-    }
+    nav .menu_1{display: none}
 
      /*======= NEWSLETTER  ====== */
     .newsletter_siban {
@@ -1026,7 +1073,8 @@
     }
 
     /*======= BLOCKCHAIN ADOPTION  ====== */
-    .siban_blockhain_adoption .menu_1{display: block;}
+    /* .siban_blockhain_adoption .menu_1  {display: block;} */
+    .SIBAN_bUTTON .menu_1  {display: block;}
     .menu_1 li{margin-bottom: 2.5rem}
     .menu_1 li:nth-of-type(1) a{padding: 1rem 3rem}
     .siban_blockhain_body{max-width: 100%}
@@ -1078,10 +1126,9 @@
         background-color: #0073D7;
         padding: 4rem 0rem;
     }
-    .SIBAN_corporate_background{
-        /* margin-top: 8rem; */
-        padding: 1rem;
-    }
+
+    .SIBAN_corporate_background{padding: 1rem}
+    .SIBAN_corporate_background h3{font-size: 1.5rem}
 
     .SIBAN_corporate_background::before {
         top: 5px;
@@ -1091,15 +1138,26 @@
         transform: rotate(173deg); 
       }
 
-    .SIBAN_corporate_background h3{font-size: 1.5rem}
-    /* .SIBAN_corporate .menu_1{display: block;} */
-
     
     /*======= FOOTER STYLING  ====== */
     .SIBAN_footer_link {
-        flex-basis: 45%; /* Each section takes up 100% of the container width */
+        flex-basis: 45%; 
     }
 
+     /*== FOOTER BOTTOM  === */
+     .SIBAN_footer_bottom {
+        color: #fff;
+        padding: 30px 0px;
+    }
+
+    .SIBAN_footer_bottom_flex {display: block}
+    .SIBAN_footer_bottom_logo {margin: 2rem 0rem}
+    .SIBAN_footer_link .SIBAN_footer_li a{line-height: 1}
+
+    .SIBAN_footer_link .SIBAN_footer_li{
+        display: block;
+        margin-top: 1rem;
+    }
 
 
     

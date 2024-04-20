@@ -79,3 +79,10 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+
+// Copyright Year changing
+document.addEventListener('DOMContentLoaded', function() {
+    var year = new Date().getFullYear();
+    document.getElementById('copyright').textContent = "@ " + year + " SIBAN. All rights reserved";
+});
