@@ -10,11 +10,9 @@
         --min-padding: 10px;
         --max-padding: 30px;
         --main-color: #0073D7;
+        --secondary-color: #00325D;
+        --linear-black: #09092E;
       }
-      
-      /* .element {
-        padding: clamp(var(--min-padding), 5vw, var(--max-padding));
-      } */
     
     *{
         box-sizing: border-box;
@@ -27,7 +25,6 @@
     }
 
     h1{
-        /* font-size: 50px; */
         font-size: clamp(1rem, 10vw, 50px); /* Min(1rem) Normal(10vw) Max(2.5rem) */
         line-height: 64px;
     }
@@ -38,7 +35,6 @@
     }
 
     h4{
-        /* font-size: 24px; */
         font-size: clamp(10px, 5vw, 24px);
         color: #222;
     }
@@ -73,9 +69,32 @@
 
     .siban_header{
         background-color: #0073D7;
-        /* border-bottom: 2px solid #DADADA; */
         padding: 1rem 3rem;
     }
+
+    
+
+    /* ===== ABOUT ====== */
+    #siban_header_about{
+        background-color: #fff;
+    }
+
+    #about_menu li a{
+        color: var(--secondary-color);
+    }
+
+    #about_menu_1 li a{
+        background-color: #fff;
+        color: var(--main-color);
+        border: 2px solid #0073D7;
+    }
+
+    #about_menu_1 li:nth-of-type(2) a{
+        background-color: #0073D7;
+        color: #fff;
+    }
+
+
 
     .siban_header_image a {
         color: #fff;
@@ -103,13 +122,13 @@
     }
 
     .menu li a:visited {
-        color: #0073D7; /* Original Color */
-        text-decoration: none; /* Remove default underline */
+        color: #0073D7; 
+        text-decoration: none; 
     }
 
     .menu li a:hover {
-        color: #4da8ff; /* Lighter Version on hover */
-        text-decoration: underline; /* Add underline on hover */
+        color: #4da8ff; 
+        text-decoration: underline;
     }
 
     .menu li a:active {
@@ -185,7 +204,6 @@
         background-position: center; 
         background-repeat: no-repeat; 
         width: 100%;
-        /* position: relative; */
         z-index: calc(3);
     }
 
@@ -304,16 +322,54 @@
     }
 
 
+    /*======= ABOUT - WE ENSURE TRANSPARENCY  ====== */
+    .SIBAN_world_bg img{
+        width: 100%;
+    }
+    #SIBAN_transparency_details .siban_blockhain_content_1{
+        background-color: #fff;
+        color: #00325D;
+    }
+    
+    .SIBAN_world_bg img {
+        animation: zoomInOut 4s infinite; /* 4 seconds for zoom in and out (2s each direction), infinite loop */
+        transition: transform 0.3s ease;
+    }
+    
+    
+
+    
 
 
+
+    
+    
+    
     /* =============== OUR MISSION ============== */
     .SIBAN_our_mission{
+        background-repeat: no-repeat;
+        background-size: 100%;
         background-color: #0073D7;
         color: #fff;
     }
 
     .SIBAN_our_mission marquee{
         margin-bottom: 4rem;
+    }
+
+    .SIBAN_HEADING {
+        text-align: center;
+        background-color: #fff;
+        color: #0073D7;
+        padding: 1px;
+        border-radius: 1rem;
+        max-width: 20%;
+        margin: auto;
+    }
+
+    .SIBAN_HEADING p{
+        font-size: 1.2rem;
+        font-weight: bold;
     }
 
     .SIBAN_our_mission_content{
@@ -370,6 +426,25 @@
       .SIBAN_rules_info h4 {
         color: #fff;
       }
+
+    /* =============== ABOUT THE TEAM ============== */
+    #SIBAN_team .SIBAN_our_mission_content{
+        max-width: 60%;
+        margin: auto;
+        text-align: center;
+
+        & h3{
+            margin-top: 1rem;
+            font-size: clamp(1rem, 6vw, 2.5rem)
+        }
+
+        & p {
+            font-size: clamp(8px, 4vw, 16px);
+        }
+    }
+
+
+
       
     
     /* =============== TRANSPARENCY ============== */
@@ -669,7 +744,6 @@
     /* =============== Footer ============== */
     /* Footer Styles */
     .footer_siban {
-        /* background-color: #f8f8f8; */
         color: #fff;
     }
 
@@ -863,7 +937,6 @@
 
     /*== FOOTER BOTTOM  === */
     .SIBAN_footer_bottom {
-        /* background-color: #333; */
         color: #fff;
         padding: 30px 0px;
     }
@@ -907,37 +980,29 @@
 
   /* CSS code for responsive menu */
   @media only screen and (max-width: 1100px) {
-    header{
-        padding: 0px 0rem;
-    }
-
-    .siban_header{
-        padding: 1rem 2rem;
-    }
-
+    header{padding: 0px 0rem}
+    .siban_header{padding: 1rem 2rem}
+    
     /* INNNER PADDING */
-    .section-p1{
-        padding: 30px 20px;
-    }
-
+    .section-p1{padding: 30px 20px}
+    
     .menu {
         display: none;
         flex-direction: column;
         align-items: center;
         margin: 2rem 0rem 3rem -4rem;
     }
-
+    
     .menu li {
         margin: 2px 0;
         text-align: left;
     }
-
+    
+    #mobile_about span {background-color: var(--secondary-color)}
+    .menu.active {display: flex}
     .mobile-menu {
-        display: block;
-    }
-
-    .menu.active {
-        display: flex;
+        margin-top: .8rem;
+        display: block
     }
 
     nav {
@@ -946,7 +1011,6 @@
         align-items: normal;
     }
 
-    .mobile-menu  {margin-top: .8rem}
 
     .menu_1{
         margin: 0rem;
@@ -1075,8 +1139,19 @@
     /*======= BLOCKCHAIN ADOPTION  ====== */
     /* .siban_blockhain_adoption .menu_1  {display: block;} */
     .SIBAN_bUTTON .menu_1  {display: block;}
-    .menu_1 li{margin-bottom: 2.5rem}
-    .menu_1 li:nth-of-type(1) a{padding: 1rem 3rem}
+    .menu_1 li{margin: 3rem 0rem}
+    .menu_1 li:nth-of-type(1) a{
+        padding: 1rem 8rem;
+        border-radius: 10px;
+    }
+    .SIBAN_our_mission .menu_1 li:nth-of-type(1) a{padding: 1rem 7rem}
+    .SIBAN_explore_projects .SIBAN_bUTTON .menu_1 li a{padding: 1rem 4.7rem}
+    .SIBAN_faq .SIBAN_bUTTON .menu_1 li a{padding: 1rem 6rem}
+    .menu_1 li:nth-of-type(2) a{
+        padding: 1rem 5rem;
+        border-radius: 10px;
+    }
+
     .siban_blockhain_body{max-width: 100%}
     .SIBAN_rotator img {width: 80%}
     .siban_blockhain_content_1 h2 {text-transform: uppercase}
@@ -1093,6 +1168,15 @@
     .SIBAN_explore_content{max-width: 100%}
     .SIBAN_our_mission_content p{text-align: justify}
     .SIBAN_rules_flex{display: block}
+    .SIBAN_HEADING {max-width: 70%}
+
+
+
+
+
+
+    /*======= ABOUT THE TEAM  ====== */
+    #SIBAN_team .SIBAN_our_mission_content{max-width: 100%}
 
 
     /* =============== TRANSPARENCY ============== */
@@ -1159,7 +1243,6 @@
         margin-top: 1rem;
     }
 
-
     
     
       @keyframes marquee {
@@ -1188,3 +1271,16 @@
      bottom: 0;
 } 
  }
+
+ /* WORLD BG */
+ @keyframes zoomInOut {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
