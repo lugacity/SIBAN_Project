@@ -1,0 +1,46 @@
+.SIBAN_front_img{
+    background-color: red;
+}
+
+
+
+.SIBAN_team_member_flipper {
+    position: relative;
+    perspective: 1000px; /* Set the perspective for 3D effect */
+    transition: transform 0.9s ease 0.3s;
+    
+}
+
+.SIBAN_team_member_flipper:hover .SIBAN_front_img {
+    transform: rotateY(-180deg); /* Rotate the front content to the back on hover */
+}
+
+.SIBAN_team_member_flipper:hover .SIBAN_back_img {
+    transform: rotateY(0deg); /* Rotate the back content to the front on hover */
+}
+
+.SIBAN_front_img img {
+    filter: grayscale(100%);
+    width: 100%; /* Adjust width as needed */
+    height: auto; /* Adjust height as needed */
+    
+}
+
+.SIBAN_back_img img{
+    background-color: green;
+    width: 100%; /* Adjust width as needed */
+    height: auto; /* Adjust height as needed */
+}
+
+.SIBAN_front_img, .SIBAN_back_img {
+    /* display: block; */
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+}
+
+.SIBAN_back_img {
+    transform: rotateY(180deg); /* Initially hide the back content */
+}

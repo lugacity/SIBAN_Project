@@ -363,7 +363,7 @@
         color: #0073D7;
         padding: 1px;
         border-radius: 1rem;
-        max-width: 20%;
+        max-width: 30%;
         margin: auto;
     }
 
@@ -413,7 +413,6 @@
         background-color: #fff;
         border-top-right-radius: 3rem;
         border-bottom-left-radius: 3rem;
-        /* background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('path/to/background_image.jpg'); */
         background-size: cover;
         opacity: 0.2;
         z-index: -1;
@@ -442,6 +441,133 @@
             font-size: clamp(8px, 4vw, 16px);
         }
     }
+
+
+
+
+
+    /* === ABOUT THE TEAM MEMBERS ==== */
+
+    .SIBAN_team_member_flex{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr ;
+        gap: 3rem;
+    }
+    
+    /* === THE ADVISORY BOARD === */
+    .the_advisory_board{
+        margin-top: 5rem;
+    }
+
+    #SIBAN_advisory_board{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 3rem;
+    }
+
+    .SIBAN_team_member_flipper {
+        position: relative;
+        width: 100%; /* Adjust width as needed */
+        height: auto; /* Adjust height as needed */
+        perspective: 1000px; /* Set the perspective for 3D effect */
+        
+        
+    }
+    
+    .SIBAN_team_member_flipper:hover .SIBAN_front_img {
+        transform: rotateY(-180deg); /* Rotate the front content to the back on hover */
+    }
+    
+    .SIBAN_team_member_flipper:hover .SIBAN_back_img {
+        transform: rotateY(0deg); /* Rotate the back content to the front on hover */
+    }
+
+    .SIBAN_front_img img {
+        filter: grayscale(100%);
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+    
+    .SIBAN_front_img::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 98%;
+        background-color: rgba(21, 129, 224, 0.6);
+        /* opacity: 0.5; */
+        /* z-index: 1; */
+    }
+    
+
+    .SIBAN_back_img img{
+        /* background-color: green; */
+        width: 100%;
+        height: 100%;
+    }
+
+    
+    .SIBAN_front_img, .SIBAN_back_img {
+        /* display: block; */
+        position: absolute;
+        top: 0;
+        left: 0;
+        backface-visibility: hidden;
+        transition: transform 0.9s ease 0.3s;
+    }
+    
+    .SIBAN_back_img {
+        position: relative;
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat; 
+        background-color: red;
+        transform: rotateY(180deg); /* Initially hide the back content */
+        z-index: 1;
+    }
+
+    .SIBAN_back_img::before{
+        content: '';
+        position: absolute;
+        top: 71.5%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        /* background-color: black; */
+        /* background: linear-gradient(to bottom, #005DAE, #0073D7); */
+        background: linear-gradient(to right, #005DAE, #0073D7);
+
+        /* opacity: 0.5; */
+        height: 28%;
+        /* z-index: -1; */
+    }
+    
+    
+    .SIBAN_back_img_content {
+        position: absolute;
+        top: 90%;
+        left: 58%;
+        transform: translate(-50%, -50%);
+        /* text-align: center; */
+        color: #fff;
+        width: 100%;
+        line-height: 0;
+    }
+
+    
+
+    .SIBAN_back_img_content p{
+        line-height: 15px;
+        font-size: 15px;
+    }
+
+    .SIBAN_back_img_content p:nth-of-type(2){
+        font-size: .6rem;
+    }
+    
+    
 
 
 
@@ -1056,9 +1182,11 @@
     }
 
     /*======= MISSION, VISSION  ====== */
-    .SIBAN_our_mission_content{
+    .SIBAN_our_mission_content {
         max-width: 100%;
     }
+
+    
 
     .SIBAN_our_mission marquee{margin-bottom: 1rem}
     .SIBAN_rules_flex{display: grid}
@@ -1116,6 +1244,24 @@
       .SIBAN_corporate_background h3{font-size: 1.8rem}
       .SIBAN_corporate .menu_1{margin-top: 0rem}
 
+      
+      
+      /* === THE TEAM MEMBERS  ===*/
+    #SIBAN_team .SIBAN_our_mission_content{
+        max-width: 100%;
+    }
+
+    .SIBAN_back_img_content {
+        top: 93%;
+        left: 58%;
+    }
+        
+    .SIBAN_back_img_content p{
+        line-height: 15px;
+        font-size: 12px;
+    }
+    
+
 }
 
 
@@ -1154,7 +1300,15 @@
 
     .siban_blockhain_body{max-width: 100%}
     .SIBAN_rotator img {width: 80%}
-    .siban_blockhain_content_1 h2 {text-transform: uppercase}
+    .siban_blockhain_content_1 h2 {
+        font-size: 2rem;
+        font-weight: 100;
+    }
+    .siban_blockhain_content_1 p {
+        font-size: .9rem;
+        font-style: italic;
+        font-weight: 500;
+    }
     .SIBAN_percentage_category {animation: marquee 20s linear infinite}
 
     .SIBAN_percentage {
@@ -1169,8 +1323,6 @@
     .SIBAN_our_mission_content p{text-align: justify}
     .SIBAN_rules_flex{display: block}
     .SIBAN_HEADING {max-width: 70%}
-
-
 
 
 
@@ -1243,9 +1395,34 @@
         margin-top: 1rem;
     }
 
+     /* === THE TEAM MEMBERS  ===*/
+     /* #SIBAN_team .SIBAN_our_mission_content{
+        max-width: 100%;
+    }
+
+    .SIBAN_back_img_content {
+        top: 93%;
+        left: 58%;
+    }
+        
+    .SIBAN_back_img_content p{
+        line-height: 15px;
+        font-size: 12px;
+    } */
+
+    .SIBAN_team_member_flex{
+        display: grid;
+        grid-template-columns: 1fr 1fr  ;
+        gap: 1rem;
+        /* display: block;
+        gap: 3rem; */
+    }
+    
+      
     
     
-      @keyframes marquee {
+    
+    @keyframes marquee {
         0% { transform: translateX(100%); } 
         100% { transform: translateX(-100%); }
       }
