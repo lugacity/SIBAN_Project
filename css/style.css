@@ -362,7 +362,7 @@
         background-color: #fff;
         color: #0073D7;
         padding: 1px;
-        border-radius: 1rem;
+        border-radius: 60px;
         max-width: 30%;
         margin: auto;
     }
@@ -379,11 +379,11 @@
 
         & h3{
             margin-top: 1rem;
-            font-size: clamp(1rem, 7vw, 2.5rem)
+            font-size: clamp(1rem, 9vw, 2.5rem)
         }
 
         & p {
-            font-size: clamp(8px, 4vw, 20px);
+            font-size: clamp(22px, 15vw, 20px);
         }
     }
 
@@ -620,6 +620,9 @@
     
     
     /* =============== EXPLORE OUR PROJECTS ============== */
+    .SIBAN_explore_projects{
+        padding: 80px 0px;
+    }
     .SIBAN_explore_content{
         max-width: 60%;
         margin: auto;
@@ -631,7 +634,12 @@
         }
 
         & p {
-            font-size: clamp(10px, 4vw, 20px);
+            font-size: clamp(10px, 5vw, 20px);
+        }
+        
+        & p:nth-of-type(1){
+            line-height: 0;
+            font-weight: 500;
         }
     }
 
@@ -1241,8 +1249,8 @@
         height: 300px; 
       }
 
-      .SIBAN_corporate_background h3{font-size: 1.8rem}
-      .SIBAN_corporate .menu_1{margin-top: 0rem}
+    .SIBAN_corporate_background h3{font-size: 1.8rem}
+    .SIBAN_corporate .menu_1{margin-top: 0rem}
 
       
       
@@ -1288,14 +1296,14 @@
     .menu_1 li{margin: 3rem 0rem}
     .menu_1 li:nth-of-type(1) a{
         padding: 1rem 8rem;
-        border-radius: 10px;
+        border-radius: 60px;
     }
     .SIBAN_our_mission .menu_1 li:nth-of-type(1) a{padding: 1rem 7rem}
     .SIBAN_explore_projects .SIBAN_bUTTON .menu_1 li a{padding: 1rem 4.7rem}
     .SIBAN_faq .SIBAN_bUTTON .menu_1 li a{padding: 1rem 6rem}
     .menu_1 li:nth-of-type(2) a{
         padding: 1rem 5rem;
-        border-radius: 10px;
+        border-radius: 60px;
     }
 
     .siban_blockhain_body{max-width: 100%}
@@ -1320,9 +1328,19 @@
     /*======= MISSION, VISSION  ====== */
     .SIBAN_our_mission_content,
     .SIBAN_explore_content{max-width: 100%}
-    .SIBAN_our_mission_content p{text-align: justify}
+    /* .SIBAN_our_mission_content p{text-align: justify} */
     .SIBAN_rules_flex{display: block}
     .SIBAN_HEADING {max-width: 70%}
+
+    .SIBAN_rules_info:nth-of-type(2) {
+        position: relative;
+
+      }
+
+    .SIBAN_rules_info:nth-of-type(2)::before {
+        background-color: #005ea8;
+        opacity: 0.3;
+      }
 
 
 
@@ -1335,14 +1353,25 @@
     .SIBAN_transparency_flex{margin-top: 2rem}
     .SIBAN_transparency_img img{display: none;}
     .SIBAN_transparency_content h2{font-size: 1.5rem}
-    .SIBAN_transparency_content p{text-align: justify}
+    .SIBAN_transparency_content p{
+        text-align: justify;
+        font-weight: 100;
+    }
 
     .SIBAN_transparency_flex::before {
-        top: 10px;
-        left: 5px;
-        width: 98%;
-        height: 30%;
+       display: none;
       }
+
+      /* === EXPLOUR OUR PROJECTS */
+      .SIBAN_explore_content h3 {
+        font-size: 2rem;
+      }
+      
+      .SIBAN_explore_content p:nth-of-type(2){
+            font-weight: 100;
+        }
+
+      
 
     /* =============== SIBAN BLOCKCHAIN EDUCATION INITIATIVES ============== */   
     .SIBAN_blockchain_info{padding-top: 2rem}
@@ -1417,6 +1446,7 @@
         /* display: block;
         gap: 3rem; */
     }
+    
     
       
     
