@@ -665,10 +665,10 @@
         position: relative;
     }
 
-    .SIBAN_blockchain_content_1{
-        /* position: relative; */
+    /* .SIBAN_blockchain_content_1{
+        position: relative;
         top: 150px;
-    }
+    } */
 
     .SIBAN_blockchain_content_1{
         padding: .4rem 0rem;
@@ -684,16 +684,28 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: #fff;
-        opacity: 0.5;
+        /* background-color: #fff; */
+        /* background: linear-gradient(to right, rgba(0, 93, 174, 0.909), rgba(0, 115, 215, 0.991)); */
+        background: linear-gradient(to bottom, #005DAE, #0073D7);
+
+        /* opacity: 0.5; */
         z-index: -1;
     }
 
     .SIBAN_blockchain_content_1 h4{
-        color: var(--main-color);
+        /* color: var(--main-color); */
+        color: #fff;
         text-align: center;
         text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); 
         font-size: 1.3rem;
+    }
+
+    .SIBAN_blockchain_content_2{
+        margin-top: 1rem;
+    }
+
+    .SIBAN_blockchain_content_2 h3{
+        font-size: 1.8rem;
     }
 
 
@@ -759,7 +771,7 @@
         font-size: 18px;
         color: #666;
     }
-    
+
     .siban-content {
         display: none;
     }
@@ -775,13 +787,17 @@
     .siban-header {
         font-weight: 600;
         cursor: pointer;
-        padding: 10px;
-        border-bottom: 1px solid #ddd;
+        padding-bottom: 30px ;
+        border-bottom: 2px solid #ddd;
         position: relative;
     }
 
     .siban-item{
-        padding: .5rem 0rem;
+        padding: .8rem 0rem;
+    }
+
+    .siban-content{
+        padding-top: 3rem;
     }
 
     .siban-header .icon {
@@ -797,7 +813,7 @@
     }
 
     .siban-content {
-        padding: 10px;
+        padding-top: 30px;
     }
 
     #searchMessage {
@@ -849,8 +865,51 @@
       }
     
     
-    
-    
+    /* =============== ABOUT OUR LEADERSHIP ============== */
+    .SIBAN_leadership{
+        /* background-color: #0073D7; */
+        padding: 12rem 4rem;
+        /* background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat;  */
+    }
+
+    .SIBAN_leadership_background{
+        padding: 2rem 5rem;
+        text-align: center;
+        color: #fff;
+        position: relative;
+        z-index: 1;
+    }
+
+    .SIBAN_leadership_background::before {
+        content: '';
+        position: absolute;
+        top: -50px;
+        left: 50px;
+        width: 90%;
+        height: 400px;
+        background-color: #fff;
+        border-radius: 3rem;
+        background-size: cover;
+        opacity: 0.2;
+        z-index: -1;
+        transform: rotate(173deg); 
+      }
+
+      .SIBAN_leadership h3{
+        font-size: 48px; 
+      }
+
+      .SIBAN_leadership p{
+        font-size: 18px; 
+      }
+
+      .SIBAN_corporate .menu_1{
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+      }
     
     
     
@@ -1217,6 +1276,7 @@
     .SIBAN_transparency_img img{width: 350px}
     .SIBAN_transparency_content h2{font-size: 2.5rem}
     .SIBAN_transparency_content p{font-size: 1rem}
+    .SIBAN_blockchain_content_2 h3{font-size: 1.2rem}
 
      /* =============== EXPLORE OUR PROJECTS ============== */
      .SIBAN_explore_content{
@@ -1230,6 +1290,7 @@
     .SIBAN_blockchain_content_1{top: 160px}
     .SIBAN_blockchain_content_1::before{top: 5}
     .SIBAN_blockchain_flex{gap: 2rem}
+    
 
 
     /* =============== BECOME A CORPORATE MEMBER ============== */
@@ -1252,11 +1313,28 @@
     .SIBAN_corporate_background h3{font-size: 1.8rem}
     .SIBAN_corporate .menu_1{margin-top: 0rem}
 
+    /* === ABOUT OUR LEADERSHIP  ===*/
+    .SIBAN_leadership_background{
+        padding: 2rem 1rem;
+    }
+
+    .SIBAN_leadership_background::before {
+        display: none;
+    }
+
+    .SIBAN_leadership_background h3{font-size: 1.8rem}
+    .SIBAN_leadership_background p{font-size: 1.1rem}
+    .SIBAN_leadership .menu_1{margin-top: 0rem}
+
       
       
-      /* === THE TEAM MEMBERS  ===*/
+    /* === THE TEAM MEMBERS  ===*/
     #SIBAN_team .SIBAN_our_mission_content{
         max-width: 100%;
+    }
+
+    #SIBAN_advisory_board{
+        grid-template-columns: 1fr 1fr;
     }
 
     .SIBAN_back_img_content {
@@ -1300,7 +1378,9 @@
     }
     .SIBAN_our_mission .menu_1 li:nth-of-type(1) a{padding: 1rem 7rem}
     .SIBAN_explore_projects .SIBAN_bUTTON .menu_1 li a{padding: 1rem 4.7rem}
-    .SIBAN_faq .SIBAN_bUTTON .menu_1 li a{padding: 1rem 6rem}
+    .SIBAN_faq .SIBAN_bUTTON .menu_1 li a{padding: 1rem 5.5rem}
+    .SIBAN_leadership .SIBAN_bUTTON .menu_1 li a{padding: 1rem 3.7rem}
+
     .menu_1 li:nth-of-type(2) a{
         padding: 1rem 5rem;
         border-radius: 60px;
@@ -1308,6 +1388,7 @@
 
     .siban_blockhain_body{max-width: 100%}
     .SIBAN_rotator img {width: 80%}
+    .SIBAN_percentage_category {animation: marquee 20s linear infinite}
     .siban_blockhain_content_1 h2 {
         font-size: 2rem;
         font-weight: 100;
@@ -1317,7 +1398,6 @@
         font-style: italic;
         font-weight: 500;
     }
-    .SIBAN_percentage_category {animation: marquee 20s linear infinite}
 
     .SIBAN_percentage {
         overflow: hidden; 
@@ -1362,6 +1442,7 @@
        display: none;
       }
 
+    
       /* === EXPLOUR OUR PROJECTS */
       .SIBAN_explore_content h3 {
         font-size: 2rem;
@@ -1372,14 +1453,15 @@
         }
 
       
-
     /* =============== SIBAN BLOCKCHAIN EDUCATION INITIATIVES ============== */   
     .SIBAN_blockchain_info{padding-top: 2rem}
     .SIBAN_blockchain_content_1{top: 160px}
+    .SIBAN_blockchain_content_2 a{font-style: italic;}
     .SIBAN_blockchain_flex{
         display: block;
         gap: 3rem;
     }
+    
 
     /* =============== FAQ ============== */   
     .SIBAN_faq_search input[type="text"] {width: calc(100% - 30px)}
@@ -1392,8 +1474,10 @@
         padding: 4rem 0rem;
     }
 
+    .SIBAN_corporate_background::before {background-color: transparent}
     .SIBAN_corporate_background{padding: 1rem}
     .SIBAN_corporate_background h3{font-size: 1.5rem}
+    .SIBAN_corporate_background p{font-size: 1.4rem}
 
     .SIBAN_corporate_background::before {
         top: 5px;
@@ -1403,7 +1487,31 @@
         transform: rotate(173deg); 
       }
 
-    
+    /* ==== ABOUT OUR LEADERSHIP === */
+    .SIBAN_leadership{
+        background-color: #0073D7;
+        padding: 4rem 0rem;
+    }
+    /* .SIBAN_corporate_background::before {background-color: transparent} */
+    .SIBAN_leadership_background{padding: 1rem}
+    .SIBAN_leadership_background h3{font-size: 1.5rem}
+    .SIBAN_leadership_background p{
+        font-size: 1rem;
+        text-align: justify;
+    }
+
+    .SIBAN_leadership_background::before {
+        top: 5px;
+        left: 20px;
+        width: 90%;
+        height: 100px;
+        transform: rotate(173deg); 
+    }
+
+
+
+
+      
     /*======= FOOTER STYLING  ====== */
     .SIBAN_footer_link {
         flex-basis: 45%; 
@@ -1425,6 +1533,12 @@
     }
 
      /* === THE TEAM MEMBERS  ===*/
+     #SIBAN_advisory_board{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
      /* #SIBAN_team .SIBAN_our_mission_content{
         max-width: 100%;
     }
