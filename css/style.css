@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@100;200;300;400;500&family=Encode+Sans+Expanded:wght@100;200;300;400;500;600&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&family=Rubik:wght@300;400;500;600&family=Sen:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
 
 /* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&family=Rubik:wght@300;400;500;600&display=swap'); */
 
@@ -66,8 +67,11 @@
         align-items: center;
         transition: transform 0.3s;
     }
-
+    
     .siban_header{
+        position: sticky;
+        top: 0;
+        z-index: calc(10000);
         background-color: #0073D7;
         padding: 1rem 3rem;
     }
@@ -75,9 +79,7 @@
     
 
     /* ===== ABOUT ====== */
-    #siban_header_about{
-        background-color: #fff;
-    }
+   
 
     #about_menu li a{
         color: var(--secondary-color);
@@ -328,7 +330,7 @@
     }
     #SIBAN_transparency_details .siban_blockhain_content_1{
         background-color: #fff;
-        color: #00325D;
+        color: #475667;
     }
     
     .SIBAN_world_bg img {
@@ -379,7 +381,7 @@
 
         & h3{
             margin-top: 1rem;
-            font-size: clamp(1rem, 9vw, 2.5rem)
+            font-size: clamp(1rem, 7vw, 2.5rem)
         }
 
         & p {
@@ -543,8 +545,7 @@
         height: 28%;
         /* z-index: -1; */
     }
-    
-    
+
     .SIBAN_back_img_content {
         position: absolute;
         top: 90%;
@@ -556,7 +557,9 @@
         line-height: 0;
     }
 
-    
+    .SIBAN_back_img_content b {
+        font-size: 18.5px;
+    }
 
     .SIBAN_back_img_content p{
         line-height: 15px;
@@ -950,8 +953,6 @@
     .get_in_touch_info {
         
         & h4 {
-            /* font-size: 24px;
-            color: #333; */
             margin-bottom: 15px;
             color: #fff;
         }
@@ -965,10 +966,10 @@
     }
 
     .get_in_touch_input {
-
+        font-family: "caveat", cursive;;
         & label {
-            font-size: 16px;
-            margin-bottom: 5px;
+            font-size: 20px;
+            margin-bottom: 20px;
             display: block;
         }
 
@@ -1011,12 +1012,13 @@
 
         &   button {
                 padding: 10px 20px;
-                background-color: #0073D7;
-                color: #fff;
+                background-color: #fff;
+                color: #0073D7;
                 border: none;
                 border-radius: 5px;
                 cursor: pointer;
                 font-size: 16px;
+                font-weight: 500;
         }
     
         &   button:hover {
@@ -1357,19 +1359,51 @@
     .menu_1 li a{padding: .8rem}
     nav .menu_1{display: none}
 
+     /*=================== GET IN TOUCH ================ */
+     .get_in_touch_input button {
+        margin-top: 1rem;
+        padding: 20px;
+        width: 100%;
+}
+
      /*======= NEWSLETTER  ====== */
     .newsletter_siban {
         display: block;
         padding: 4rem 0rem;
     }
+    
+    
+    .newsletter_siban_input {
+        display: block;
 
-    .newsletter_siban_input input[type="text"] {
-        width: 300px; 
-        aspect-ratio: 16 / 4;  
+        & input[type="text"] {
+            width: 100%; 
+            border-radius: 25px;
+            height: 3.125rem;
+            margin-bottom: .8rem;
+            border: 2px solid #ccc;
+            background-color: transparent;
+        }
+
+        & input[type="text"]::placeholder {
+            color: white;
+        }
+
+        button{
+            color: #0073D7;
+            background-color: #fff;
+            border-radius: 25px;
+            width: 100%;
+        }
+
     }
+
 
     /*======= BLOCKCHAIN ADOPTION  ====== */
     /* .siban_blockhain_adoption .menu_1  {display: block;} */
+    .SIBAN_explore_projects{
+        padding: 0px;
+    }
     .SIBAN_bUTTON .menu_1  {display: block;}
     .menu_1 li{margin: 3rem 0rem}
     .menu_1 li:nth-of-type(1) a{
@@ -1404,13 +1438,45 @@
         white-space: nowrap;
         position: relative; 
       }
+
+    
+    /*======= ABOUT - WE ENSURE TRANSPARENCY  ====== */
+    #SIBAN_transparency_details h2 {
+        font-size: 24px; 
+        text-align: left;
+        line-height: 1.2;
+    }
+    
+    #SIBAN_transparency_details p {
+        font-size: .9rem;
+        font-style: normal;
+        text-shadow: 0px; 
+        font-weight: 100;
+        text-align: justify;
+    }
+
+
+    
     
     /*======= MISSION, VISSION  ====== */
     .SIBAN_our_mission_content,
     .SIBAN_explore_content{max-width: 100%}
+    .SIBAN_explore_content p{font-size: 15px; padding: 0rem 2rem;}
+    .SIBAN_explore_content h3{font-size: 24px;}
     /* .SIBAN_our_mission_content p{text-align: justify} */
     .SIBAN_rules_flex{display: block}
-    .SIBAN_HEADING {max-width: 70%}
+    .SIBAN_HEADING {
+        color: #fff;
+        background-color: transparent;
+        max-width: 70%;
+        padding: 0px;
+    }
+
+    .SIBAN_HEADING p {
+        line-height: 0px;
+        margin-top: 3rem;
+    }
+
 
     .SIBAN_rules_info:nth-of-type(2) {
         position: relative;
@@ -1430,6 +1496,9 @@
 
 
     /* =============== TRANSPARENCY ============== */
+    .SIBAN_transparency{
+        padding: 6rem 0rem;
+    }
     .SIBAN_transparency_flex{margin-top: 2rem}
     .SIBAN_transparency_img img{display: none;}
     .SIBAN_transparency_content h2{font-size: 1.5rem}
@@ -1439,8 +1508,20 @@
     }
 
     .SIBAN_transparency_flex::before {
-       display: none;
+        display: none;
       }
+
+
+    .display_bg {
+        position: absolute;
+        width: 100%;
+        height: 470px;
+        background-color: #fff;
+        top: 1710px;
+        left: 0px;
+        z-index: 1;
+        opacity: 0.2;
+    }
 
     
       /* === EXPLOUR OUR PROJECTS */
@@ -1464,8 +1545,9 @@
     
 
     /* =============== FAQ ============== */   
-    .SIBAN_faq_search input[type="text"] {width: calc(100% - 30px)}
-    .search-icon {left: 30px}
+    .SIBAN_faq_header p{font-size: 14px;}
+    .SIBAN_faq_search input[type="text"] {width: 100%}
+    .search-icon {left: 20px}
 
 
     /* =============== BECOME A CORPORATE MEMBER ============== */
@@ -1476,8 +1558,8 @@
 
     .SIBAN_corporate_background::before {background-color: transparent}
     .SIBAN_corporate_background{padding: 1rem}
-    .SIBAN_corporate_background h3{font-size: 1.5rem}
-    .SIBAN_corporate_background p{font-size: 1.4rem}
+    .SIBAN_corporate_background h3{font-size: 1.7rem}
+    .SIBAN_corporate_background p{font-size: 1rem; padding: 0rem 3rem;}
 
     .SIBAN_corporate_background::before {
         top: 5px;
@@ -1528,8 +1610,8 @@
     .SIBAN_footer_link .SIBAN_footer_li a{line-height: 1}
 
     .SIBAN_footer_link .SIBAN_footer_li{
-        display: block;
-        margin-top: 1rem;
+        /* display: block; */
+        margin-top: 2rem;
     }
 
      /* === THE TEAM MEMBERS  ===*/
@@ -1539,27 +1621,41 @@
         gap: 3rem;
     }
 
-     /* #SIBAN_team .SIBAN_our_mission_content{
-        max-width: 100%;
-    }
-
-    .SIBAN_back_img_content {
-        top: 93%;
-        left: 58%;
-    }
-        
-    .SIBAN_back_img_content p{
-        line-height: 15px;
-        font-size: 12px;
-    } */
-
     .SIBAN_team_member_flex{
         display: grid;
-        grid-template-columns: 1fr 1fr  ;
+        grid-template-columns: 1fr;
         gap: 1rem;
-        /* display: block;
-        gap: 3rem; */
     }
+
+    .the_advisory_board{
+        margin-top: 5rem;
+    }
+    
+    .SIBAN_team_member_flipper:hover .SIBAN_front_img {
+        transform: rotateY(0deg); 
+    }
+    
+    .SIBAN_team_member_flipper:hover .SIBAN_back_img {
+        transform: rotateY(0deg); 
+    }
+    
+    .SIBAN_front_img{
+        display: none;
+    }
+
+    .SIBAN_back_img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        backface-visibility:visible;
+        display: block;
+    }
+    
+    .SIBAN_back_img {
+        position: relative;
+        transform: rotateY(0deg);
+    }
+
     
     
       

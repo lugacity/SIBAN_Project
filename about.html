@@ -28,6 +28,30 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
         <!-- CUSTOM CSS -->
         <link href="css/style.css" rel="stylesheet">
+         
+    <style>
+        #siban_header_about{
+            background-color: #fff;
+            transition: 0.6s ease-in-out; 
+        }
+
+        #siban_header_about.sticky {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000; 
+            background: #f5f3f3;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: top 0.6s ease-in-out; 
+        }
+
+        /* Add padding to the body when the navigation becomes sticky to prevent content from jumping */
+        body.sticky-nav-padding {
+            padding-top: 80px; /* Adjust according to the height of your navigation */
+        }
+    </style>
+
 
       </head>
 
@@ -238,15 +262,15 @@
                 <!-- 7 -->
                 <div class="SIBAN_team_member_flipper" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">
                     <div class="SIBAN_front_img">
-                        <img src="images/about/Daisy_Erharhire.png" alt="Daisy_Erharhire_Image">
+                        <img src="images/about/Becky_Ogheneakporobo.png" alt="Becky_Ogheneakporobo_Image">
                     </div>
     
                 <div class="SIBAN_back_img" style="background-image: url('images/color_background.png');">
                     <div class="SIBAN_back_img_bg">
-                        <img src="images/about/Daisy_Erharhire.png" alt="Daisy_Erharhire_Image">
+                        <img src="images/about/Becky_Ogheneakporobo.png" alt="Becky_Ogheneakporobo_Image">
                     </div>
                     <div class="SIBAN_back_img_content" >
-                        <b>Daisy Erharhire</b>
+                        <b>Becky Ogheneakporobo</b>
                         <p>Treasurer</p>
                     </div>
                 </div>
@@ -264,7 +288,7 @@
                     </div>
                     <div class="SIBAN_back_img_content" >
                         <b>Daisy Erharhire</b>
-                        <p>Treasurer</p>
+                        <p>Assistant Executive Secretary</p>
                     </div>
                 </div>
                 </div>
@@ -274,124 +298,108 @@
 
 
         <!-- THE ADVISORY BOARD -->
-        <div class="the_advisory_board">
-            <!-- HEADING -->
-            <div class="SIBAN_HEADING" >
-                <p>Advisory Board</p>
-            </div>
-
-            <div class="SIBAN_our_mission_content" data-aos="zoom-in" data-aos-duration="1000">
-                <h3>Meet the team behind SIBAN</h3>
-                <p>Effective December 2022, SiBAN is led by an Executive Council. 
-                    The Executive Council comprises 7 elected officers and 3 appointed members. 
-                    The names, offices, and affiliations (with profile links) of these elected 
-                    officers and appointed members as follows:</p>
-            </div>
-
-            <div class="SIBAN_team_member_flex" id="SIBAN_advisory_board">
-                <!-- 1 -->
-                <div class="SIBAN_team_member_flipper" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">
-                      <div class="SIBAN_front_img">
-                          <img src="images/about/Chris_Ani.png" alt="Chris_Ani_image">
-                      </div>
-
-                      <div class="SIBAN_back_img" style="background-image: url('images/color_background.png');">
-                      <div class="SIBAN_back_img_bg">
-                        <img src="images/about/Chris_Ani.png" alt="Chris_Ani_image">
-                      </div>
-                      <div class="SIBAN_back_img_content">
-                          <b>Chris Ani</b>
-                          <p>Founder Digital (Abundance & DABA)</p>
-                      </div>
-                  </div>
-              </div>
-
-                <!-- 2 -->
-                <div class="SIBAN_team_member_flipper" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">
-                  <div class="SIBAN_front_img">
-                      <img src="images/about/Babalola_Emmanuel.png" alt="Babalola_Emmanuel_Image">
-                  </div>
-
-                  <div class="SIBAN_back_img" style="background-image: url('images/color_background.png');">
-                  <div class="SIBAN_back_img_bg">
-                    <img src="images/about/Babalola_Emmanuel.png" alt="Babalola_Emmanuel_Image">
-                  </div>
-                  <div class="SIBAN_back_img_content" >
-                      <b>Babalola Emmanuel</b>
-                      <p>Director Binance Nigeria</p>
-                  </div>
-              </div>
-              </div>
-
-              <!-- 3 -->
-              <div class="SIBAN_team_member_flipper" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">
-                  <div class="SIBAN_front_img">
-                      <img src="images/about/Paul_Ezeafulukwe.png" alt="Paul_Ezeafulukwe_image">
-                  </div>
-
-                  <div class="SIBAN_back_img" style="background-image: url('images/color_background.png');">
-                  <div class="SIBAN_back_img_bg">
-                    <img src="images/about/Paul_Ezeafulukwe.png" alt="Paul_Ezeafulukwe_image">
-                  </div>
-                  <div class="SIBAN_back_img_content">
-                      <b>Paul Ezeafulukwe</b>
-                      <p>Founder BLOKgrup</p>
-                  </div>
-              </div>
-          </div>
-
-            <!-- 4 -->
-            <div class="SIBAN_team_member_flipper" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">
-              <div class="SIBAN_front_img">
-                <img src="images/about/Senator_Ihenyen.png" alt="Senator_Ihenyen_Image">
-              </div>
-
-              <div class="SIBAN_back_img" style="background-image: url('images/color_background.png');">
-              <div class="SIBAN_back_img_bg">
-                  <img src="images/about/Senator_Ihenyen.png" alt="Senator_Ihenyen_Image">
-              </div>
-              <div class="SIBAN_back_img_content" >
-                  <b>Senator Ihenyen</b>
-                  <p>Lead Partner Infusion Lawyers</p>
-              </div>
-          </div>
-          </div>
-        </div>
-      </div>
-    
-       <!-- ABOUT OUR LEADERSHIP -->
-    <div class="SIBAN_leadership">
-        <div class="SIBAN_leadership_background" >
-            <h3 data-aos="fade-in" data-aos-easing="linear" data-aos-duration="2000">About Our Leadership</h3>
-            <p data-aos="fade-up" data-aos-easing="linear" data-aos-duration="4000">If you have any observation or question in respect of any officer or member of the SiBAN Executive Council or Advisory Board listed above or you wish to share any information with us about our leadership, please email info@siban.org.ng. As soon as we receive and review your email, we will respond accordingly. Thank you.
-               <br> <br>  Together, let’s build a blockchain industry where everyone can engage safely, fairly, and happily.
-                </p>
-                <!-- New unordered list for "Get Started" -->
-                <div class="SIBAN_bUTTON">
-                    <ul class="menu_1">
-                    <li><a href="consultation.html" style="background-color: #fff; color: #0073D7;">Partner with experts</a></li>
-                </ul>
+            <div class="the_advisory_board">
+                <!-- HEADING -->
+                <div class="SIBAN_HEADING" >
+                    <p>Advisory Board</p>
                 </div>
+
+                <div class="SIBAN_our_mission_content" data-aos="zoom-in" data-aos-duration="1000">
+                    <h3>Meet the team behind SIBAN</h3>
+                    <p>Effective December 2022, SiBAN is led by an Executive Council. 
+                        The Executive Council comprises 7 elected officers and 3 appointed members. 
+                        The names, offices, and affiliations (with profile links) of these elected 
+                        officers and appointed members as follows:</p>
+                </div>
+
+                <div class="SIBAN_team_member_flex" id="SIBAN_advisory_board">
+                    <!-- 1 -->
+                    <div class="SIBAN_team_member_flipper" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">
+                        <div class="SIBAN_front_img">
+                            <img src="images/about/Chris_Ani.png" alt="Chris_Ani_image">
+                        </div>
+
+                        <div class="SIBAN_back_img" style="background-image: url('images/color_background.png');">
+                        <div class="SIBAN_back_img_bg">
+                            <img src="images/about/Chris_Ani.png" alt="Chris_Ani_image">
+                        </div>
+                        <div class="SIBAN_back_img_content">
+                            <b>Chris Ani</b>
+                            <p>Founder Digital (Abundance & DABA)</p>
+                        </div>
+                    </div>
+                </div>
+
+                    <!-- 2 -->
+                    <div class="SIBAN_team_member_flipper" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">
+                    <div class="SIBAN_front_img">
+                        <img src="images/about/Babalola_Emmanuel.png" alt="Babalola_Emmanuel_Image">
+                    </div>
+
+                    <div class="SIBAN_back_img" style="background-image: url('images/color_background.png');">
+                    <div class="SIBAN_back_img_bg">
+                        <img src="images/about/Babalola_Emmanuel.png" alt="Babalola_Emmanuel_Image">
+                    </div>
+                    <div class="SIBAN_back_img_content" >
+                        <b>Babalola Emmanuel</b>
+                        <p>Director Binance Nigeria</p>
+                    </div>
+                </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="SIBAN_team_member_flipper" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">
+                    <div class="SIBAN_front_img">
+                        <img src="images/about/Paul_Ezeafulukwe.png" alt="Paul_Ezeafulukwe_image">
+                    </div>
+
+                    <div class="SIBAN_back_img" style="background-image: url('images/color_background.png');">
+                    <div class="SIBAN_back_img_bg">
+                        <img src="images/about/Paul_Ezeafulukwe.png" alt="Paul_Ezeafulukwe_image">
+                    </div>
+                    <div class="SIBAN_back_img_content">
+                        <b>Paul Ezeafulukwe</b>
+                        <p>Founder BLOKgrup</p>
+                    </div>
+                </div>
+            </div>
+
+                <!-- 4 -->
+                <div class="SIBAN_team_member_flipper" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">
+                <div class="SIBAN_front_img">
+                    <img src="images/about/Senator_Ihenyen.png" alt="Senator_Ihenyen_Image">
+                </div>
+
+                <div class="SIBAN_back_img" style="background-image: url('images/color_background.png');">
+                <div class="SIBAN_back_img_bg">
+                    <img src="images/about/Senator_Ihenyen.png" alt="Senator_Ihenyen_Image">
+                </div>
+                <div class="SIBAN_back_img_content" >
+                    <b>Senator Ihenyen</b>
+                    <p>Lead Partner Infusion Lawyers</p>
+                </div>
+            </div>
+            </div>
+            </div>
         </div>
-    </div>
+        
+        <!-- ABOUT OUR LEADERSHIP -->
+        <div class="SIBAN_leadership">
+            <div class="SIBAN_leadership_background" >
+                <h3 data-aos="fade-in" data-aos-easing="linear" data-aos-duration="2000">About Our Leadership</h3>
+                <p data-aos="fade-up" data-aos-easing="linear" data-aos-duration="4000">If you have any observation or question in respect of any officer or member of the SiBAN Executive Council or Advisory Board listed above or you wish to share any information with us about our leadership, please email info@siban.org.ng. As soon as we receive and review your email, we will respond accordingly. Thank you.
+                <br> <br>  Together, let’s build a blockchain industry where everyone can engage safely, fairly, and happily.
+                    </p>
+                    <!-- New unordered list for "Get Started" -->
+                    <div class="SIBAN_bUTTON">
+                        <ul class="menu_1">
+                        <li><a href="consultation.html" style="background-color: #fff; color: #0073D7;">Partner with experts</a></li>
+                    </ul>
+                    </div>
+            </div>
+        </div>
     
       </section>
-
-
-    <!-- BECOME A CORPORATE MEMBER -->
-    <section class="SIBAN_corporate section-p1" style="background-image: url('images/become-corporate1.png');">
-        <div class="SIBAN_corporate_background" >
-            <h3 data-aos="fade-in" data-aos-easing="linear" data-aos-duration="2000">Become a Corperate Member of Nigeria's Blockchain Association Today</h3>
-            <p data-aos="fade-up" data-aos-easing="linear" data-aos-duration="4000">Join over 4,000+ User Worldwide already growing with SIBAN</p>
-                <!-- New unordered list for "Get Started" -->
-                <div class="SIBAN_bUTTON">
-                    <ul class="menu_1">
-                    <li><a href="store.html">Store</a></li>
-                    <li><a href="consultation.html">Free Consultation</a></li>
-                </ul>
-                </div>
-        </div>
-    </section>
 
  </header>
 
@@ -535,33 +543,11 @@
       </script>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    if (window.innerWidth <= 450) {
-      const infoDivs = document.querySelectorAll('.SIBAN_rules_info');
-      let currentSlide = 0;
-
-      function showSlide(n) {
-        infoDivs.forEach(div => div.style.display = 'none');
-        infoDivs[n].style.display = 'block';
-      }
-
-      function nextSlide() {
-        currentSlide = (currentSlide + 1) % infoDivs.length;
-        showSlide(currentSlide);
-      }
-
-      function prevSlide() {
-        currentSlide = (currentSlide - 1 + infoDivs.length) % infoDivs.length;
-        showSlide(currentSlide);
-      }
-
-      showSlide(currentSlide);
-
-      // Change slide every 2 seconds
-      setInterval(nextSlide, 4000);
-    }
-  });
-  </script>
+    window.addEventListener('scroll', function() {
+     var nav = document.getElementById('siban_header_about'); // Get the navigation element
+     nav.classList.toggle('sticky', window.scrollY > 200);
+ });
+ </script>
 
 
 
