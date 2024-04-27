@@ -270,13 +270,13 @@
     .siban_blockhain_content_1 h2 {
         font-size: clamp(1rem, 5vw, 4rem); /* Min(1rem) Normal(10vw) Max(2.5rem) */
         line-height: 1.2;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); 
+        /* text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);  */
     }
 
     .siban_blockhain_content_1 p {
         font-size: clamp(1rem, 3vw, 1.3rem); 
         line-height: 1.2;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); 
+        /* text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);  */
     }
     
     .SIBAN_bUTTON .menu_1{
@@ -966,11 +966,15 @@
     }
 
     .get_in_touch_input {
-        font-family: "caveat", cursive;;
+        /* font-family: "caveat", cursive;; */
         & label {
             font-size: 20px;
             margin-bottom: 20px;
             display: block;
+        }
+
+        label:nth-of-type(4) {
+            margin-bottom: 80px;
         }
 
         & label span {
@@ -1413,7 +1417,7 @@
     .SIBAN_our_mission .menu_1 li:nth-of-type(1) a{padding: 1rem 7rem}
     .SIBAN_explore_projects .SIBAN_bUTTON .menu_1 li a{padding: 1rem 4.7rem}
     .SIBAN_faq .SIBAN_bUTTON .menu_1 li a{padding: 1rem 4.5rem}
-    .SIBAN_leadership .SIBAN_bUTTON .menu_1 li a{padding: 1rem 3rem}
+    .SIBAN_leadership .SIBAN_bUTTON .menu_1 li a{padding: 1rem 2.5rem}
 
     .menu_1 li:nth-of-type(2) a{
         padding: 1rem 5rem;
