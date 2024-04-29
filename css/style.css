@@ -506,11 +506,11 @@
 
         & h3{
             margin-top: 1rem;
-            font-size: clamp(1rem, 7vw, 2.5rem)
+            font-size: clamp(1rem, 6vw, 2.5rem)
         }
 
         & p {
-            font-size: clamp(22px, 15vw, 20px);
+            font-size: clamp(22px, 13vw, 20px);
         }
     }
 
@@ -1715,7 +1715,7 @@
     .SIBAN_bUTTON .menu_1 li{
         width: 100%;
         background-color: #fff;
-        padding: 1rem;
+        padding: .8rem;
         border-radius: 3rem;
         cursor: pointer;
         border: 2px solid #fff;
@@ -1793,7 +1793,7 @@
     /*======= MISSION, VISSION  ====== */
     .SIBAN_our_mission_content,
     .SIBAN_explore_content{max-width: 100%}
-    .SIBAN_explore_content p{font-size: 15px; padding: 0rem 2rem;}
+    .SIBAN_explore_content p{font-size: 15px; padding: 0rem 1rem;}
     .SIBAN_explore_content h3{font-size: 24px;}
     /* .SIBAN_our_mission_content p{text-align: justify} */
     .SIBAN_rules_flex{display: block}
@@ -1890,7 +1890,7 @@
 
     .SIBAN_corporate_background::before {background-color: transparent}
     .SIBAN_corporate_background{padding: 1rem}
-    .SIBAN_corporate_background h3{font-size: 1.7rem}
+    .SIBAN_corporate_background h3{font-size: 1.5rem}
     .SIBAN_corporate_background p{font-size: 1rem; padding: 0rem 3rem;}
 
     .SIBAN_corporate_background::before {
