@@ -1890,8 +1890,7 @@
 
     .SIBAN_corporate_background::before {background-color: transparent}
     .SIBAN_corporate_background{padding: 1rem}
-    .SIBAN_corporate_background h3{font-size: 1.5rem}
-    /* .SIBAN_corporate_background p{font-size: 1rem; padding: 0rem 1rem;} */
+    .SIBAN_corporate_background h3{font-size: 1.2rem}
 
     .SIBAN_corporate_background::before {
         top: 5px;
