@@ -1,966 +1,80 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@100;200;300;400;500&family=Encode+Sans+Expanded:wght@100;200;300;400;500;600&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&family=Rubik:wght@300;400;500;600&family=Sen:wght@400..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
 
-/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&family=Rubik:wght@300;400;500;600&display=swap'); */
-
-    html {
-        scroll-behavior: smooth;
+    /*==== RESOURCES AND INSIGHTS ====*/
+    .resources{
+        padding-top: 5rem;
     }
 
-    :root {
-        --min-padding: 10px;
-        --max-padding: 30px;
-        --main-color: #0073D7;
-        --secondary-color: #00325D;
-        --linear-black: #09092E;
-      }
+    .SIBAN_resources_img img {
+        margin: 0rem;
+        width: 100%;
+    }
+
+    .siban_content_h2{
+        color: #00325D;
+        font-size: clamp(1rem, 7vw, 1.5rem);
+    }
+
+    .siban_content_p{
+        color: #475467;
+        font-size: clamp(1rem, 3vw, 1.1rem); 
+        text-align: justify;
+        line-height: 1.5;
+    }
+
+    /* ====BLOG POST EVENT===== */
     
-    *{
-        box-sizing: border-box;
-        padding: 0;
-        margin: 0;
+    .hidden {
+        display: none;
     }
 
-    body{    
-        font-family: 'Sen', sans-serif;
-    }
-
-    h1{
-        font-size: clamp(1rem, 10vw, 50px); /* Min(1rem) Normal(10vw) Max(2.5rem) */
-        line-height: 64px;
-    }
-
-    h2{
-        font-size: 64px;
-        line-height: 54px;
-    }
-
-    h4{
-        font-size: clamp(10px, 5vw, 24px);
-        color: #222;
-    }
-
-    h6{
-        font-weight: 700;
-        font-size: 12px;
-    }
-
-    p{
-        font-size: clamp(1rem, 3vw, 1.1rem);
-        font-weight: 400;
-        margin: 15px 0 20px 0;
-        /* --animation-delay: 500ms */
-    }
-
-    /* INNNER PADDING */
-    .section-p1{
-        padding: 40px 60px;
-    }
-    
-    .section-m1{
-        margin: 40px 0;
-    }
-
-    nav {
+    #filter {
         display: flex;
         justify-content: space-between;
-        align-items: center;
-        transition: transform 0.3s;
-    }
-    
-    .siban_header{
-        position: sticky;
-        top: 0;
-        z-index: calc(10000);
-        background-color: #0073D7;
-        padding: 1rem 3rem;
-    }
-
-    
-
-    /* ===== ABOUT ====== */
-   
-
-    #about_menu li a{
-        color: var(--secondary-color);
-    }
-
-    #about_menu_1 li a{
-        background-color: #fff;
-        color: var(--main-color);
-        border: 2px solid #0073D7;
-    }
-
-    #about_menu_1 li:nth-of-type(2) a{
-        background-color: #0073D7;
-        color: #fff;
-    }
-
-
-
-    .siban_header_image a {
-        color: #fff;
-        font-weight: bold;
-        text-decoration: none;
-    }
-    
-    .menu, .menu_1 {
-        display: flex;
-        list-style-type: none;
-        color: #fff;
-        margin: 0;
-        padding: 0;
-    }
-
-    .menu .menu_1, li a {
-        font-weight: 500;
-        margin-right: 1rem;
-        text-decoration: none;
-        color: #dde7f0;
-    }
-    
-    .menu li {
-        margin-right: 20px;
-    }
-
-    .menu li a:visited {
-        color: #0073D7; 
-        text-decoration: none; 
-    }
-
-    .menu li a:hover {
-        color: #4da8ff; 
-        text-decoration: underline;
-    }
-
-    .menu li a:active {
-        color: #66a3e0; 
-    }
-
-    .menu_1{
-        margin-left: 4rem;
-    }
-    
-    .menu_1 li a{
-        color: #fff;
-        background-color: #0073D7;
-        padding: .5rem 1.5rem;
-        border: 1.4px solid #fff;
-        border-radius: 2rem;
-    }
-
-    .menu_1 li:nth-child(2) a{
-        color: #0073D7;
-        background-color: #fff;
-    }
-
-    .submenu {
-        display: none;
-        transition: opacity 0.3s ease-in-out;
-        position: absolute;
-        top: 100%;
-        z-index: 1000;
-    }
-    
-    .menu {
-        position: relative; /* Ensure the parent menu item is positioned relatively */
-    }
-    
-    .submenu.active {
-        display: block;
-    }
-
-    /* CSS code for mobile menu styles */
-    .mobile-menu {
-        display: none;
-        cursor: pointer;
-        transition: transform 2s; /* Add a 2-second transition for the transform property */
-    }
-
-    .mobile-menu span {
-        display: block;
-        width: 25px;
-        height: 3px;
-        background-color: #fff;
-        margin-bottom: 5px;
-        transition: transform 0.3s;
-    }
-
-    .mobile-menu.active span:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
-
-    .mobile-menu.active span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .mobile-menu.active span:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-    }
-
-
-    /* =============== BLOCKCHAIN ADOPTION ============== */
-    .siban_blockhain_adoption {
-        text-align: center;
-        background-size: cover; 
-        background-position: center; 
-        background-repeat: no-repeat; 
-        width: 100%;
-        z-index: calc(3);
-    }
-
-    .siban_blockhain_adoption::after {
-        content: ""; 
-        position: absolute;
-        top: 0; 
-        left: 0; 
-        width: 100%; 
-        height: 100%;
-        background-image: url('images/mask.png'); 
-        background-size: cover; 
-        background-position: center; 
-        opacity: 0.5; 
-        z-index: -1;
-        /* background-color: red; */
-    }
-    
-    .siban_blockhain_body{
-        max-width: 80%;
-        margin: auto;
-        color: #fff;
-    }
-
-    .siban_blockhain_content_1{
-        margin: 0rem 0rem 3rem 0rem;
-    }
-
-    /* Animation */
-
-    .siban_blockhain_content_1 h2 span:nth-of-type(1){
-        --animation-delay: 10ms;
-    }
-
-    .siban_blockhain_content_1 h2 span:nth-of-type(2){
-        --animation-delay: 300ms;
-    }
-
-    .siban_blockhain_content_1 h2 span:nth-of-type(3){
-        --animation-delay: 500ms;
-    }
-
-    .siban_blockhain_content_1 h2 span:nth-of-type(4){
-        --animation-delay: 700ms;
-    }
-
-    .siban_blockhain_content_1 h2 span:nth-of-type(5){
-        --animation-delay: 900ms;
-    }
-
-    .siban_blockhain_content_1 h2 span:nth-of-type(6){
-        --animation-delay: 1100ms;
-    }
-
-    .siban_blockhain_content_1 h2 span{
-        opacity: 0;
-        position: relative;
-        animation: blur 500ms forwards ease-out;
-        animation-delay: var(--animation-delay);
-    } 
-    
-    .siban_blockhain_content_1 h2 {
-        font-size: clamp(1rem, 5vw, 4rem); /* Min(1rem) Normal(10vw) Max(2.5rem) */
-        line-height: 1.2;
-        /* text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);  */
-    }
-
-    .siban_blockhain_content_1 p {
-        font-size: clamp(1rem, 3vw, 1.3rem); 
-        line-height: 1.2;
-        /* text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);  */
-    }
-    
-    .SIBAN_bUTTON .menu_1{
-        display: flex;
-        justify-content: center;
-        --animation-delay: 1200ms;
-    }
-
-    .SIBAN_rotator img {
-        animation: rotateImage 2s linear infinite; /* Rotate the image every 2 seconds */
-        margin-top: 2rem;
-        width: 40%;
-        z-index: -1;
-    }
-
-
-
-    /* Percentage */
-    .SIBAN_percentage{
-        background-color: #005DAE;
-    } 
-
-    .SIBAN_percentage_category {
-        display: flex;
-        justify-content: center;
-    }
-    
-    .SIBAN_percentage_1 {
-        color: #fff;
-        border-right: 1px solid #ccc; /* Add border-right */
-        padding: 5px 40px;
-        padding-right: 20px; 
-        margin-right: 20px; 
-    }
-    
-    /* Remove border-right from the last div */
-    .SIBAN_percentage_1:last-child {
-        border-right: none;
-    }
-
-    .SIBAN_percentage_1 h4{
-        color: #fff;
-        padding-top: 2rem;
-        line-height: 0;
-    }
-
-
-    /*======= ABOUT - WE ENSURE TRANSPARENCY  ====== */
-    .SIBAN_world_bg img{
-        width: 100%;
-    }
-    #SIBAN_transparency_details .siban_blockhain_content_1{
-        background-color: #fff;
-        color: #475667;
-    }
-    
-    .SIBAN_world_bg img {
-        animation: zoomInOut 4s infinite; /* 4 seconds for zoom in and out (2s each direction), infinite loop */
-        transition: transform 0.3s ease;
-    }
-    
-    
-
-    
-    
-    
-    
-    
-    /* =============== EXPERIENCE THE VIBRANT ============== */   
-     .siban_experience_vibrant{
-        text-align: left;
-        color: #fff;
-        position: relative;
-    }
-
-    .siban_experience_rap{
-        width: 80%;
-    }
-
-    .siban_experience_content_1{
-        margin: 0rem 0rem 3rem 0rem;
-    }
-
-    .siban_experience_content_1 h2 span {
-        opacity: 0;
-        position: relative;
-        color: transparent; 
-        background-image: linear-gradient(to right, #fff 70.33%, #b8daf8 70%);
-        background-clip: text; 
-        -webkit-background-clip: text; /* For Safari */
-        animation: blur 500ms forwards ease-out;
-        animation-delay: var(--animation-delay);
-    }
-
-    
-    .siban_experience_content_1 h2 {
-        font-size: clamp(1rem, 7vw, 3.8rem); /* Min(1rem) Normal(10vw) Max(2.5rem) */
-        line-height: 1.2;
-        font-weight: normal;
-        /* text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);  */
-    }
-
-    .siban_experience_content_1 p {
-        font-size: clamp(1rem, 3vw, 1.2rem); 
-        text-align: justify;
-        line-height: 1.2;
-        width: 80%;
-    }
-
-    .SIBAN_experience_img img {
-        margin-top: 2rem;
-        width: 100%;
-        z-index: -1;
-    }
-
-
-
-    /* Percentage for experience vibrant */
-    .SIBAN_percentage_category{
-        background-color: #afc4d60f;
-    } 
-
-    .siban_experience_rap 
-    .SIBAN_percentage_category {
-        display: flex;
-        justify-content: start;
-    }
-    
-    .siban_experience_rap 
-    .SIBAN_percentage_1 {
-        color: #fff;
-        border-right: 1px solid #ccc; /* Add border-right */
-        padding: 5px 40px;
-        padding-right: 20px; 
-        margin-right: 20px; 
-    }
-    
-    /* Remove border-right from the last div */
-    .SIBAN_percentage_1:last-child {
-        border-right: none;
-    }
-
-    .SIBAN_percentage_1 h4{
-        color: #fff;
-        padding-top: 2rem;
-        line-height: 0;
-    }
-
-
-    /* HOST AND MODERATORS */
-    .SIBAN_host_moderator_content{
-        max-width: 65%;
-        margin: auto;
-        text-align: center;
-
-        & h3{
-            margin-top: 1rem;
-            font-size: clamp(1rem, 6vw, 2.9rem)
-        }
-
-        & p {
-            font-size: clamp(10px, 5vw, 20px);
-        }
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-    /*======= ABOUT - WE ENSURE TRANSPARENCY  ====== */
-    .SIBAN_world_bg img{
-        width: 100%;
-    }
-    #SIBAN_transparency_details .siban_blockhain_content_1{
-        background-color: #fff;
-        color: #475667;
-    }
-    
-    .SIBAN_world_bg img {
-        animation: zoomInOut 4s infinite; /* 4 seconds for zoom in and out (2s each direction), infinite loop */
-        transition: transform 0.3s ease;
-    }
-
-
-
-    
-    
-    
-    /* =============== OUR MISSION ============== */
-    .SIBAN_our_mission{
-        background-repeat: no-repeat;
-        background-size: 100%;
-        background-color: #0073D7;
-        color: #fff;
-    }
-
-    .SIBAN_our_mission marquee{
-        margin-bottom: 4rem;
-    }
-
-    .SIBAN_HEADING {
-        text-align: center;
-        background-color: #fff;
-        color: #0073D7;
-        padding: 1px;
-        border-radius: 60px;
-        max-width: 30%;
-        margin: auto;
-    }
-
-    .SIBAN_HEADING p{
-        font-size: 1.2rem;
-        font-weight: bold;
-    }
-
-    .SIBAN_our_mission_content{
-        max-width: 50%;
-        margin: auto;
-        text-align: center;
-
-        & h3{
-            margin-top: 1rem;
-            font-size: clamp(1rem, 6vw, 2.5rem)
-        }
-
-        & p {
-            font-size: clamp(22px, 13vw, 20px);
-        }
-    }
-
-    .SIBAN_rules{
-        padding: 2rem 3rem;
-    }
-
-    .SIBAN_rules_flex{
-        display: flex;
-        gap: 2rem;
-        text-align: justify;
-    }
-
-    .SIBAN_rules_info {
-        position: relative;
-        padding: 2rem ;
-        z-index: 1;
-      }
-
-    .SIBAN_rules_info::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: #fff;
-        border-top-right-radius: 3rem;
-        border-bottom-left-radius: 3rem;
-        background-size: cover;
-        opacity: 0.2;
-        z-index: -1;
-      }
-
-      .SIBAN_rules_img {
-         text-align: right;
-      }
-
-      .SIBAN_rules_info h4 {
-        color: #fff;
-      }
-
-    /* =============== ABOUT THE TEAM ============== */
-    #SIBAN_team .SIBAN_our_mission_content{
-        max-width: 60%;
-        margin: auto;
-        text-align: center;
-
-        & h3{
-            margin-top: 1rem;
-            font-size: clamp(1rem, 6vw, 2.5rem)
-        }
-
-        & p {
-            font-size: clamp(8px, 4vw, 16px);
-        }
-    }
-
-
-
-
-
-    /* === ABOUT THE TEAM MEMBERS ==== */
-
-    .SIBAN_team_member_flex{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr ;
-        gap: 3rem;
-    }
-    
-    /* === THE ADVISORY BOARD === */
-    .the_advisory_board{
-        margin-top: 5rem;
-    }
-
-    #SIBAN_advisory_board{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        gap: 3rem;
-    }
-
-    .SIBAN_team_member_flipper {
-        position: relative;
-        width: 100%; 
-        height: auto; 
-        perspective: 1000px;
-    }
-    
-    .SIBAN_team_member_flipper:hover .SIBAN_front_img {
-        transform: rotateY(-180deg); /* Rotate the front content to the back on hover */
-    }
-    
-    .SIBAN_team_member_flipper:hover .SIBAN_back_img {
-        transform: rotateY(0deg); /* Rotate the back content to the front on hover */
-    }
-
-    .SIBAN_front_img img {
-        filter: grayscale(100%);
-        width: 100%;
-        height: 100%;
-        z-index: 1;
-    }
-    
-    .SIBAN_front_img::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 98%;
-        background-color: rgba(21, 129, 224, 0.6);
-    }
-    
-
-    .SIBAN_back_img img{
-        width: 100%;
-        height: 100%;
-    }
-
-    
-    .SIBAN_front_img, .SIBAN_back_img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        backface-visibility: hidden;
-        /* transition: transform 0.9s ease 0.3s; */
-    }
-    
-    .SIBAN_back_img {
-        position: relative;
-        background-size: cover; 
-        background-position: center; 
-        background-repeat: no-repeat; 
-        background-color: red;
-        transform: rotateY(180deg); /* Initially hide the back content */
-        z-index: 1;
-    }
-
-    .SIBAN_back_img::before{
-        content: '';
-        position: absolute;
-        top: 71.5%;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(to right, #005DAE, #0073D7);
-        height: 28%;
-        /* z-index: -1; */
-    }
-
-    .SIBAN_back_img_content {
-        position: absolute;
-        top: 90%;
-        left: 58%;
-        transform: translate(-50%, -50%);
-        color: #fff;
-        width: 100%;
-        line-height: 0;
-    }
-
-    .SIBAN_back_img_content b {
-        font-size: 18.5px;
-    }
-
-    .SIBAN_back_img_content p{
-        line-height: 15px;
-        font-size: 15px;
-    }
-
-    .SIBAN_back_img_content p:nth-of-type(2){
-        font-size: .6rem;
-    }
-    
-    
-
-
-
-      
-    
-    /* =============== TRANSPARENCY ============== */
-    .SIBAN_transparency_flex{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-top: 8rem;
-        position: relative;
-        z-index: 1;
-        color: #fff;
-    }
-
-    .SIBAN_transparency_flex::before {
-        content: '';
-        position: absolute;
-        top: 5;
-        left: 150px;
-        width: 90%;
-        height: 80%;
-        background-color: #fff;
-        border-radius: 3rem;
-        background-size: cover;
-        opacity: 0.2;
-        z-index: 1;
-        transform: rotate(173deg); 
-      }
-
-    .SIBAN_transparency_img img{
-        width: 500px;
-    }
-
-    .SIBAN_transparency_content{
-        z-index: 1;
-        text-align: center;
-    }
-
-    .SIBAN_transparency_content h2{
-        font-size: 3rem;
-        line-height: 0;
-    }
-
-    .SIBAN_transparency_content p{
-        margin: 2.5rem 0rem;
-    }
-
-    
-    
-    /* =============== EXPLORE OUR PROJECTS ============== */
-    .SIBAN_explore_projects{
-        padding: 80px 0px;
-    }
-    .SIBAN_explore_content{
-        max-width: 60%;
-        margin: auto;
-        text-align: center;
-
-        & h3{
-            margin-top: 1rem;
-            font-size: clamp(1rem, 7vw, 2rem)
-        }
-
-        & p {
-            font-size: clamp(10px, 5vw, 20px);
-        }
-        
-        & p:nth-of-type(1){
-            line-height: 0;
-            font-weight: 500;
-        }
-    }
-
-
-    /* =============== SIBAN BLOCKCHAIN EDUCATOON INITIATIVES ============== */
-    .SIBAN_blockchain_edu{
-        margin-top: 3rem;
-    }
-    
-    .SIBAN_blockchain_flex{
-        display: grid;
-        grid-template-columns: 2fr 2fr;
-        gap: 2rem;
-        text-align: justify;
-    }
-    
-    .SIBAN_blockchain_info{
-        padding: 2rem;
-    }
-
-    .SIBAN_blockchain_img_content{
-        height: 200px;
-        position: relative;
-    }
-
-    /* .SIBAN_blockchain_content_1{
-        position: relative;
-        top: 150px;
-    } */
-
-    .SIBAN_blockchain_content_1{
-        padding: .4rem 0rem;
-        position: relative;
-        top: 155px;
-        z-index: calc(3);
-    }
-    
-    .SIBAN_blockchain_content_1::before{
-        content: '';
-        position: absolute;
-        top: 5;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        /* background-color: #fff; */
-        /* background: linear-gradient(to right, rgba(0, 93, 174, 0.909), rgba(0, 115, 215, 0.991)); */
-        background: linear-gradient(to bottom, #005DAE, #0073D7);
-
-        /* opacity: 0.5; */
-        z-index: -1;
-    }
-
-    .SIBAN_blockchain_content_1 h4{
-        /* color: var(--main-color); */
-        color: #fff;
-        text-align: center;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); 
-        font-size: 1.3rem;
-    }
-
-    .SIBAN_blockchain_content_2{
-        margin-top: 1rem;
-    }
-
-    .SIBAN_blockchain_content_2 h3{
-        font-size: 1.8rem;
-    }
-
-
-    /* =============== SIBAN EVENT INFO ============== */
-    .SIBAN_event{
-        margin-top: 3rem;
-    }
-
-    .SIBAN_event_upcoming_flex{
-        display: grid;
-        grid-template-columns: 2fr 2fr;
-        align-items: center;
-        margin-bottom: 40px;
-    }
-
-    .SIBAN_event_search {
-        position: relative;
-        text-align: center;
-    }
-    
-    .SIBAN_event_search input[type="text"] {
-        width: calc(100% - 30px);
-        padding: 15px;
-        padding-left: 40px; 
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        outline: none;
-        font-size: 16px;
-        box-sizing: border-box;
-        background-color: #fff;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-    
-    .SIBAN_search-icon {
-        position: absolute;
-        left: 30px;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-    
-    .SIBAN_search-icon i {
-        font-size: 18px;
-        color: #666;
-    }
-
-
-    
-    .SIBAN_event_flex{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 1rem;
-        text-align: justify;
+    }
+
+    #filterSelect {
+        display: none;
+    }
+
+    #filter .filter_btn{
+        border-bottom: 1px solid #808080;
     }
     
-    .SIBAN_event_info{
-        padding: 1rem;
-        position: relative;
-        z-index: 1;
+    #filter button {
+        padding: 10px 20px;
+        font-size: 14px;
+        background-color: transparent;
+        color: #808080;
+        border: none;
+        cursor: pointer;
+        text-align: left;
+    }
+
+    #filter button:nth-of-type(1) {
+        color: #000;
+        font-size: 1rem;
+        font-weight: 600;
     }
     
-    .SIBAN_event_info::before{
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: #E7F4FF;
-        border-radius: 1rem;
-        opacity: 0.4;
-        z-index: -1;
+    #filter button:hover {
+        color: #0056b3;
     }
-
-    .SIBAN_event_img_content{
-        height: 150px;
-        position: relative;
-    }
-
-    .SIBAN_event_content_1{
-        padding: .4rem 0rem;
-        position: relative;
-        top: 2vh;
-        left: -80px;
-        z-index: calc(3);
-    }
-
-    .SIBAN_event_content_1 h4{
-        color: #fff;
-        text-align: center;
-        font-size: 1.1rem;
-    }
-
-    .SIBAN_event_content_2 a{
-        text-decoration: none;
-        color: #fff;
-    }
-
-    .SIBAN_event_content_2 a:hover{
-        text-decoration: underline;
-        color: #E7F4FF;
-    }
-
-    .SIBAN_event_content_2{
-        margin-top: 1rem;
-    }
-
-    .SIBAN_event_content_2 h3{
-        font-size: 15px;
-    }
-
-    .SIBAN_event_content_2 p{
-        font-size: 12px;
-    }
-/* 
-    .SIBAN_blockchain_flex1{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: .1rem;
-    } */
-
-
+    
+    
     /* PAGINATION IN UPCOMING EVENT */
 
-    .pagination {
+    .pagination_blog {
         margin-top: 20px;
         display: flex;
         justify-content: space-between;
     }
 
-    /* .pagination button {
-        margin-right: 10px;
-    } */
-
-    .pagination .pageNumber {
+    .pagination_blog .pageNumber {
         cursor: pointer;
     }
 
-    .pagination button {
+    .pagination_blog button {
         padding: 10px 20px;
         margin-right: 10px;
         background-color: #0073D7;
@@ -971,7 +85,7 @@
         transition: background-color 0.3s;
     }
     
-    .pagination button:hover {
+    .pagination_blog button:hover {
         background-color: #005DAE;
     }
     
@@ -994,1071 +108,199 @@
         background-color: #005DAE;
     }
 
-    
-
-
-
-
-
-
-
-
-
-
-
-    /* =============== FAQ ============== */
-    .SIBAN_main{
-        padding: 2rem 0rem;
-        background-size: cover; 
-        background-color: #0073D7;
-        color: #fff;
+    .pagination-blog .pagination-buttons button{
+        background-color: red;
     }
 
-    .SIBAN_main .SIBAN_bUTTON{
-        margin: 1rem 0rem;
-    }
 
-    .SIBAN_faq{
-        max-width: 850px;
-        margin: auto;
-    }
-
-    .SIBAN_faq_header{
-        text-align: center;
-
-        & p{
-            font-size: 1rem;
-        }
-
-        & h4{
-            font-size: clamp(10px, 6vw, 34px);
-            line-height: 0.5;
-            color: #fff;
-        }
-    }
-
-    .SIBAN_faq_search {
-        position: relative;
-        margin-bottom: 20px;
-        text-align: center;
-    }
-    
-    .SIBAN_faq_search input[type="text"] {
-        width: calc(80% - 30px);
-        padding: 15px;
-        padding-left: 40px; 
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        outline: none;
-        font-size: 16px;
-        box-sizing: border-box;
-        background-color: #fff;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-    
-    .search-icon {
-        position: absolute;
-        left: 100px;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-    
-    .search-icon i {
-        font-size: 18px;
-        color: #666;
-    }
-
-    .siban-content {
-        display: none;
-    }
-
-    .siban-content p{
-        text-align: justify;
-    }
-
-    .siban-content h3{
+    #filter h2{
         font-size: 1rem;
     }
 
-    .siban-header {
-        font-weight: 600;
-        cursor: pointer;
-        padding-bottom: 30px ;
-        border-bottom: 2px solid #ddd;
-        position: relative;
+    #filter_select{
+        display: none;
     }
 
-    .siban-item{
-        padding: .8rem 0rem;
-    }
-
-    .siban-content{
-        padding-top: 3rem;
-    }
-
-    .siban-header .icon {
-        position: absolute;
-        top: 50%;
-        right: 10px;
-        transform: translateY(-50%);
-        transition: transform 0.3s ease;
-    }
-
-    .siban-item.active .siban-header .icon {
-        transform: translateY(-50%) rotate(180deg);
-    }
-
-    .siban-content {
-        padding-top: 30px;
-    }
-
-    #searchMessage {
-        color: red;
-        margin-top: 10px;
-    }
-    
-    
-    /* =============== BECOME A CORPORATE MEMBER ============== */
-    .SIBAN_corporate{
-        background-color: #0073D7;
-        padding: 12rem 4rem;
-        background-size: cover; 
-        background-position: center; 
-        background-repeat: no-repeat; 
-    }
-
-    .SIBAN_corporate_background{
-        padding: 2rem 5rem;
-        text-align: center;
-        color: #fff;
-        position: relative;
-        z-index: 1;
-    }
-
-    .SIBAN_corporate_background::before {
-        content: '';
-        position: absolute;
-        top: -90px;
-        left: 100px;
-        width: 90%;
-        height: 400px;
-        background-color: #fff;
-        border-radius: 3rem;
-        background-size: cover;
-        opacity: 0.2;
-        z-index: -1;
-        transform: rotate(173deg); 
-      }
-
-      .SIBAN_corporate_background h3{
-        font-size: 2.5rem; 
-      }
-
-      .SIBAN_corporate .menu_1{
-        display: flex;
-        justify-content: center;
-        margin-top: 2rem;
-      }
-    
-    
-    /* =============== ABOUT OUR LEADERSHIP ============== */
-    .SIBAN_leadership{
-        /* background-color: #0073D7; */
-        padding: 12rem 4rem;
-        /* background-size: cover; 
-        background-position: center; 
-        background-repeat: no-repeat;  */
-    }
-
-    .SIBAN_leadership_background{
-        padding: 2rem 5rem;
-        text-align: center;
-        color: #fff;
-        position: relative;
-        z-index: 1;
-    }
-
-    .SIBAN_leadership_background::before {
-        content: '';
-        position: absolute;
-        top: -50px;
-        left: 50px;
-        width: 90%;
-        height: 400px;
-        background-color: #fff;
-        border-radius: 3rem;
-        background-size: cover;
-        opacity: 0.2;
-        z-index: -1;
-        transform: rotate(173deg); 
-      }
-
-      .SIBAN_leadership h3{
-        font-size: 48px; 
-      }
-
-      .SIBAN_leadership p{
-        font-size: 18px; 
-      }
-
-      .SIBAN_corporate .menu_1{
-        display: flex;
-        justify-content: center;
-        margin-top: 2rem;
-      }
-    
-    
-    
-    @keyframes rotateImage {
-        from {
-            transform: rotate(0deg); /* Starting rotation angle */
-        }
-        to {
-            transform: rotate(360deg); /* Ending rotation angle */
-        }
-    }
-    
-
-
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    /* =============== Footer ============== */
-    /* Footer Styles */
-    .footer_siban {
-        color: #fff;
-    }
-
-    .get_in_touch {
+    #results {
         display: grid;
-        grid-template-columns: 2fr 3fr;
-        gap: 12rem;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+        /* flex-wrap: wrap; */
     }
 
-    /*======= GET IN TOUCH USING NESTING PROPERTY ====== */
-    .get_in_touch_info {
-        
-        & h4 {
-            margin-bottom: 15px;
-            color: #fff;
-        }
-
-        & p {
-            font-size: 16px;
-            color: #666;
-            text-align: justify;
-            color: #fff;
-        }
-    }
-
-    .get_in_touch_input {
-        /* font-family: "caveat", cursive;; */
-        & label {
-            font-size: 20px;
-            margin-bottom: 20px;
-            display: block;
-        }
-
-        label:nth-of-type(4) {
-            margin-bottom: 80px;
-        }
-
-        & label span {
-            color: red;
-        }
-
-        & input[type="text"], input[type="email"], input[type="number"] {
-            width: 100%;
-            padding: 20px 10px;
-            margin-bottom: 15px;
-            border: none; 
-            background-color: transparent;
-            border-bottom: 2px solid #ccc; 
-            transition: border-bottom-color 0.3s ease; 
-        }
-
-        &   input[type="text"]:focus,
-            input[type="email"]:focus,
-            input[type="number"]:focus {
-                border-bottom-color: #0073D7; /* Change bottom border color when focused */
-                outline: none; /* Remove default focus outline */
-        }
-
-        &   input[type="text"]::placeholder,
-            input[type="email"]::placeholder,
-            input[type="number"]::placeholder {
-                color: #fff; /* Placeholder text color */
-                opacity: 0.4;
-                transition: transform 0.3s ease; /* Add transition for transform property */
-                transform-origin: left bottom; /* Set transform origin to bottom left */
-        }
-    
-        &   input[type="text"]:focus::placeholder,
-            input[type="email"]:focus::placeholder,
-            input[type="number"]:focus::placeholder {
-                color: #fff; 
-                transform: translateY(-100%); 
-        }
-
-        &   button {
-                padding: 10px 20px;
-                background-color: #fff;
-                color: #0073D7;
-                border: none;
-                border-radius: 5px;
-                cursor: pointer;
-                font-size: 16px;
-                font-weight: 500;
-        }
-    
-        &   button:hover {
-                background-color: #005ea8;
-        }
-
-    }
-
-
-   /*== NEWSLETTER  === */
-    .newsletter_siban {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        border-bottom: 1px solid #ccc; 
-        margin-bottom: 30px;
-        padding: 4rem 0rem 2rem 0rem;
-
-        & h4 {
-            font-size: 20px;
-            color: #fff;
-            margin-bottom: 10px;
-        }
-
-        & p {
-            font-size: 16px;
-            text-align: justify;
-        }
-
-        & button {
-            font-size: 18px;
-            font-weight: 500;
-        }
-
-    }
-
-    .newsletter_siban_input {
-        display: flex;
-        align-items: center;
-
-        & input[type="text"] {
-            width: 300px; 
-            aspect-ratio: 18 / 3;
-            padding: 0 1.25rem;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 14px;
-            border: 1px solid transparent;
-            border-radius: 4px;
-            border-top-right-radius: 0;
-            border-bottom-right-radius: 0;
-            outline: none;  
-        }
-
-        & button{
-            height: 3.125rem;
-            padding: 0 1.25rem;
-            border-radius: 4px;
-            border-top-left-radius: 0;
-            border-bottom-left-radius: 0;
-            background-color: #0073D7;
-            color: #fff;
-            white-space: nowrap;
-            border: none;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #005ea8;
-        }
-    }
-
-    /*== FOOTER STYLING  == */
-    .SIBAN_footer_flex {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap; 
-        border-bottom: 1px solid #ccc; 
-    }
-
-    .SIBAN_footer_link {
-        margin-bottom: 20px;
-        flex: 1 0 5%; 
-    }
-
-    .SIBAN_footer_link p {
-        font-weight: bold;
-        color: #cfcfcf;
-        line-height: 0;
-    }
-
-    .SIBAN_footer_li {
-        list-style: none;
-        padding: 0;
-    }
-
-    .SIBAN_footer_li li {
-        margin-bottom: 5px;
-    }
-
-    .SIBAN_footer_bottom .SIBAN_footer_li{
-        display: flex;
-    }
-
-    .SIBAN_footer_li li a {
-        /* color: #333; */
-        text-decoration: none;
-        line-height: 2;
-    }
-
-    .SIBAN_footer_li li a:hover {
-        color: #cfcfcf;
-    }
-
-
-    /*== FOOTER BOTTOM  === */
-    .SIBAN_footer_bottom {
-        color: #fff;
-        padding: 30px 0px;
-    }
-
-    .SIBAN_footer_bottom_flex {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    .SIBAN_footer_bottom_logo img {
-        max-width: 100px;
-        height: auto;
-        margin-bottom: 10px;
-    }
-
-    .SIBAN_footer_bottom_logo p {
-        font-size: 16px;
-        margin-bottom: 10px;
-    }
-
-    .SIBAN_footer_bottom_social_link .social-icon {
-        color: #fff;
-        text-decoration: none;
-        font-size: 20px;
-        margin-right: 10px;
-        background-color: #fff;
-        color: #005DAE;
-        border-radius: 100%;
-        display: inline-block;
-        padding: 8px 13px;
-    }
-
-    
-
-    .SIBAN_footer_bottom_social_link .social-icon:hover {
-        opacity: 0.7;
-    }
-
-
-
-  /* CSS code for responsive menu */
-  @media only screen and (max-width: 1100px) {
-    header{padding: 0px 0rem}
-    .siban_header{padding: 1rem 2rem}
-    
-    /* INNNER PADDING */
-    .section-p1{padding: 30px 20px}
-    
-    .menu {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        margin: 2rem 0rem 3rem -4rem;
-    }
-    
-    .menu li {
-        margin: 2px 0;
-        text-align: left;
-    }
-    
-    #mobile_about span {background-color: var(--secondary-color)}
-    .menu.active {display: flex}
-    .mobile-menu {
-        margin-top: .8rem;
-        display: block
-    }
-
-    nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: normal;
-    }
-
-
-    .menu_1{
-        margin: 0rem;
-        display: block;
-    }
-
-    .menu_1 li{
-        margin: 2rem 0rem;
-        text-align: center;
-    }
-
-    /*=================== GET IN TOUCH ================ */
-    .get_in_touch {display: block}
-
-    .get_in_touch_input input[type="text"],
-    .get_in_touch_input input[type="email"],
-    .get_in_touch_input input[type="number"] {
-        padding: 10px;
-        margin-bottom: 10px;
-    }
-
-    .get_in_touch_input input[type="text"]:focus::placeholder,
-    .get_in_touch_input input[type="email"]:focus::placeholder,
-    .get_in_touch_input input[type="number"]:focus::placeholder {
-        transform: translateY(-70%);
-    }
-
-    /*======= NEWSLETTER  ====== */
-    .newsletter_siban {display: block}
-
-    .newsletter_siban_input input[type="text"] {
-        width: 500px;
-        aspect-ratio: 20 / 2;  
-    }
-
-    /*======= BLOCKCHAIN ADOPTION  ====== */
-    .siban_blockhain_content_1{margin: 0rem 0rem 1rem 0rem}
-
-
-    /*======= PERCENTAGE ====== */
-    .SIBAN_percentage_1 p{
-        font-size: .9rem;
-    }
-
-    /*======= MISSION, VISSION  ====== */
-    .SIBAN_our_mission_content {
-        max-width: 100%;
-    }
-
-    
-
-    .SIBAN_our_mission marquee{margin-bottom: 1rem}
-    .SIBAN_rules_flex{display: grid}
-    .SIBAN_rules{padding: 2rem 0rem}
-
-    /* =============== TRANSPARENCY ============== */
-    .SIBAN_transparency_flex{
-        display: block;
-        text-align: center;
-        margin-top: 4rem;
-    }
-
-    .SIBAN_transparency_flex::before {
-        top: 250px;
-        left: 5px;
-        width: 98%;
-        height: 50%;
-      }
-      
-    .SIBAN_transparency_img img{width: 350px}
-    .SIBAN_transparency_content h2{font-size: 2.5rem}
-    .SIBAN_transparency_content p{font-size: 1rem}
-    .SIBAN_blockchain_content_2 h3{font-size: 1.2rem}
-
-     /* =============== EXPLORE OUR PROJECTS ============== */
-     .SIBAN_explore_content{
-        max-width: 90%;
-    }
-
-     /* =============== SIBAN BLOCKCHAIN EDUCATION INITIATIVES ============== */
-    .SIBAN_blockchain_edu{margin-top: 1rem}
-    .SIBAN_blockchain_info{padding: 0rem}
-    .SIBAN_blockchain_content_1 h4{font-size: 1rem}
-    .SIBAN_blockchain_content_1{top: 160px}
-    .SIBAN_blockchain_content_1::before{top: 5}
-    .SIBAN_blockchain_flex{gap: 2rem}
-    
-
-
-    /* =============== BECOME A CORPORATE MEMBER ============== */
-    .SIBAN_corporate{
-        background-color: #0073D7;
-        padding: 6rem 0rem;
-    }
-    .SIBAN_corporate_background{
-        /* margin-top: 8rem; */
-        padding: 2rem 5rem;
-    }
-
-    .SIBAN_corporate_background::before {
-        top: -30px;
-        left: 50px;
-        width: 90%;
-        height: 300px; 
-      }
-
-    .SIBAN_corporate_background h3{font-size: 1.8rem}
-    .SIBAN_corporate .menu_1{margin-top: 0rem}
-
-    /* === ABOUT OUR LEADERSHIP  ===*/
-    .SIBAN_leadership_background{
-        padding: 2rem 1rem;
-    }
-
-    .SIBAN_leadership_background::before {
-        display: none;
-    }
-
-    .SIBAN_leadership_background h3{font-size: 1.8rem}
-    .SIBAN_leadership_background p{font-size: 1.1rem}
-    .SIBAN_leadership .menu_1{margin-top: 0rem}
-
-      
-      
-    /* === THE TEAM MEMBERS  ===*/
-    #SIBAN_team .SIBAN_our_mission_content{
-        max-width: 100%;
-    }
-
-    #SIBAN_advisory_board{
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .SIBAN_back_img_content {
-        top: 93%;
-        left: 58%;
-    }
-        
-    .SIBAN_back_img_content p{
-        line-height: 15px;
-        font-size: 12px;
-    }
-    
-
-}
-
-
-
-@media only screen and (max-width: 450px) {
-
-    .menu_1 li a{padding: .8rem}
-    nav .menu_1{display: none}
-
-     /*=================== GET IN TOUCH ================ */
-     .get_in_touch_input button {
-        margin-top: 1rem;
-        border-radius: 2rem;
-        padding: 1rem;
-        width: 100%;
-    }
-
-     /*======= NEWSLETTER  ====== */
-    .newsletter_siban {
-        display: block;
-        padding: 4rem 0rem;
-    }    
-    
-    .newsletter_siban_input {
-        display: block;
-
-        & input[type="text"] {
-            width: 100%; 
-            border-radius: 25px;
-            height: 3.2rem;
-            margin-bottom: .8rem;
-            border: 2px solid #ccc;
-            background-color: transparent;
-        }
-
-        & input[type="text"]::placeholder {
-            color: white;
-        }
-
-        button{
-            color: #0073D7;
-            background-color: #fff;
-            border-radius: 25px;
-            width: 100%;
-            height: 3.2rem;
-        }
-
-    }
-
-
-    /*======= BLOCKCHAIN ADOPTION  ====== */
-
-    .SIBAN_explore_projects{
-        padding: 0px;
-    }
-
-    .SIBAN_bUTTON .menu_1{
-        display: block;
-        gap: .1rem;
-    }
-
-    .SIBAN_bUTTON .menu_1 li{
-        width: 100%;
-        background-color: #fff;
-        padding: 1rem 0rem;
-        border-radius: 3rem;
+    .technology{
         cursor: pointer;
-        border: 2px solid #fff;
+    }
+    
+    #filter {
+        margin-bottom: 20px;
     }
 
-    .SIBAN_bUTTON .menu_1 li:nth-of-type(1){
-        background-color: transparent;
+    #filter h2 {
+        font-size: 18px;
+        margin-bottom: 10px;
     }
 
-    .SIBAN_explore_projects .SIBAN_bUTTON .menu_1 li:nth-of-type(1),
-    .SIBAN_faq .SIBAN_bUTTON .menu_1 li:nth-of-type(1),
-    .SIBAN_leadership .SIBAN_bUTTON .menu_1 li:nth-of-type(1) {
-    background-color: #fff;
-}
+    #searchBar {
+        padding: 8px;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        width: 200px;
+    }
 
-    .SIBAN_bUTTON .menu_1 li a{
-        background-color: transparent;
-        border: none;
+    .SIBAN_blog .SIBAN_event_content_2 h3{
+        font-size: 20px;
+    }
+
+    .SIBAN_blog .SIBAN_event_content_2 p{
+        font-size: 15px;
+        text-align: justify;
     }
 
 
-    .menu_1 li{margin: 1rem 0rem}
-    /* .menu_1 li:nth-of-type(1) a{
-        padding: 1rem 8rem;
-        border-radius: 60px;
-    } */
-    /* .SIBAN_our_mission .menu_1 li:nth-of-type(1) a{padding: 1rem 7rem}
-    .SIBAN_explore_projects .SIBAN_bUTTON .menu_1 li a{padding: 1rem 4.7rem}
-    .SIBAN_faq .SIBAN_bUTTON .menu_1 li a{padding: 1rem 4.5rem}
-    .SIBAN_leadership .SIBAN_bUTTON .menu_1 li a{padding: 1rem 2.5rem} */
-
-    .menu_1 li:nth-of-type(2) a{
-        padding: 1rem 5rem;
-        border-radius: 60px;
+    /*==== BLOG TOPIC ====*/
+    #blog_topic,
+    .SIBAN_blog_contents{
+        width: 60%;
+        margin: auto;
+        padding-top: 4rem;
     }
 
-    .siban_blockhain_body{max-width: 100%}
-    .SIBAN_rotator img {width: 80%}
-    .SIBAN_percentage_category {animation: marquee 20s linear infinite;}
-    .siban_blockhain_content_1 h2 {
-        font-size: 2rem;
-        font-weight: 100;
+    #blog_topic .siban_experience_content_1{
+        color: #000;
     }
-    .siban_blockhain_content_1 p {
-        font-size: .9rem;
-        font-style: italic;
+
+    #blog_topic 
+    .siban_experience_content_1 h2 {
+        color: #00325D;
+        font-size: clamp(1rem, 6vw, 2rem); 
         font-weight: 500;
     }
-
-    .SIBAN_percentage {
-        overflow: hidden; 
-        white-space: nowrap;
-        position: relative; 
-      }
-
     
-    /*======= ABOUT - WE ENSURE TRANSPARENCY  ====== */
-    #SIBAN_transparency_details h2 {
-        font-size: 24px; 
-        text-align: left;
-        line-height: 1.2;
+    .siban_experience_body
+    .siban_experience_content_1 p {
+        width: 100%;
     }
     
-    #SIBAN_transparency_details p {
-        font-size: .9rem;
-        font-style: normal;
-        text-shadow: 0px; 
-        font-weight: 100;
-        text-align: justify;
+    .SIBAN_blog_container_img img{
+        width: 100%;
     }
-
 
     
     
-    /*======= MISSION, VISSION  ====== */
-    .SIBAN_our_mission_content,
-    .SIBAN_explore_content{max-width: 100%}
-    .SIBAN_explore_content p{font-size: 15px; padding: 0rem 1rem;}
-    .SIBAN_explore_content h3{font-size: 24px;}
-    /* .SIBAN_our_mission_content p{text-align: justify} */
-    .SIBAN_rules_flex{display: block}
-    .SIBAN_HEADING {
-        color: #fff;
-        background-color: transparent;
-        max-width: 70%;
-        padding: 0px;
-    }
-
-    .SIBAN_HEADING p {
-        line-height: 0px;
+    /*===== RELATED BLOG POST ====*/
+    .SIBAN_event_blog_topic{
         margin-top: 3rem;
     }
-
-
-    .SIBAN_rules_info:nth-of-type(2) {
-        position: relative;
-
-      }
-
-    .SIBAN_rules_info:nth-of-type(2)::before {
-        background-color: #005ea8;
-        opacity: 0.3;
-      }
-
-
-
-
-    /*======= ABOUT THE TEAM  ====== */
-    #SIBAN_team .SIBAN_our_mission_content{max-width: 100%}
-
-
-    /* =============== TRANSPARENCY ============== */
-    .SIBAN_transparency{
-        padding: 6rem 0rem;
-    }
-    .SIBAN_transparency_flex{margin-top: 2rem}
-    .SIBAN_transparency_img img{display: none;}
-    .SIBAN_transparency_content h2{font-size: 1.5rem}
-    .SIBAN_transparency_content p{
-        text-align: justify;
-        font-weight: 100;
-    }
-
-    .SIBAN_transparency_flex::before {
-        display: none;
-      }
-
-
-    .display_bg {
-        position: absolute;
-        width: 100%;
-        height: 470px;
-        background-color: #fff;
-        top: 1710px;
-        left: 0px;
-        z-index: 1;
-        opacity: 0.2;
-    }
-
     
-      /* === EXPLOUR OUR PROJECTS */
-      .SIBAN_explore_content h3 {
-        font-size: 2rem;
-      }
-      
-      .SIBAN_explore_content p:nth-of-type(2){
-            font-weight: 100;
-        }
-
-      
-    /* =============== SIBAN BLOCKCHAIN EDUCATION INITIATIVES ============== */   
-    .SIBAN_blockchain_info{padding-top: 2rem}
-    .SIBAN_blockchain_content_1{top: 160px}
-    .SIBAN_blockchain_content_2 a{font-style: italic;}
-    .SIBAN_blockchain_flex{
-        display: block;
-        gap: 3rem;
-    }
-    
-
-    /* =============== FAQ ============== */   
-    .SIBAN_faq_header p{font-size: 14px;}
-    .SIBAN_faq_search input[type="text"] {width: 100%}
-    .search-icon {left: 20px}
-
-
-    /* =============== BECOME A CORPORATE MEMBER ============== */
-    .SIBAN_corporate{
-        background-color: #0073D7;
-        padding: 4rem 0rem;
-    }
-
-    .SIBAN_corporate_background::before {background-color: transparent}
-    .SIBAN_corporate_background{padding: 1rem}
-    .SIBAN_corporate_background h3{font-size: 1.2rem}
-
-    .SIBAN_corporate_background::before {
-        top: 5px;
-        left: 20px;
-        width: 90%;
-        height: 100px;
-        transform: rotate(173deg); 
-      }
-
-    /* ==== ABOUT OUR LEADERSHIP === */
-    .SIBAN_leadership{
-        background-color: #0073D7;
-        padding: 4rem 0rem;
-    }
-    
-    .SIBAN_leadership_background{padding: 1rem}
-    .SIBAN_leadership_background h3{font-size: 1.5rem}
-    .SIBAN_leadership_background p{
-        font-size: 1rem;
-        text-align: justify;
-    }
-
-    .SIBAN_leadership_background::before {
-        top: 5px;
-        left: 20px;
-        width: 90%;
-        height: 100px;
-        transform: rotate(173deg); 
-    }
-
-
-
-
-      
-    /*======= FOOTER STYLING  ====== */
-    .SIBAN_footer_link {
-        flex-basis: 45%; 
-    }
-
-     /*== FOOTER BOTTOM  === */
-     .SIBAN_footer_bottom {
-        color: #fff;
-        padding: 30px 0px;
-    }
-
-    .SIBAN_footer_bottom_flex {display: block}
-    .SIBAN_footer_bottom_logo {margin: 2rem 0rem}
-    .SIBAN_footer_link .SIBAN_footer_li a{line-height: 1}
-
-    .SIBAN_footer_link .SIBAN_footer_li{
-        /* display: block; */
-        margin-top: 2rem;
-    }
-
-     /* === THE TEAM MEMBERS  ===*/
-     #SIBAN_advisory_board{
+    .SIBAN_blog_topic_flex{
         display: grid;
-        grid-template-columns: 1fr;
-        gap: 3rem;
-    }
-
-    .SIBAN_team_member_flex{
-        /* display: grid; */
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         gap: 1rem;
-    }
-
-    .the_advisory_board{
-        margin-top: 5rem;
+        text-align: justify;
     }
     
-    .SIBAN_team_member_flipper:hover .SIBAN_front_img {
-        transform: rotateY(0deg); 
-    }
-    
-    .SIBAN_team_member_flipper:hover .SIBAN_back_img {
-        transform: rotateY(0deg); 
-    }
-    
-    .SIBAN_front_img{
-        display: none;
-    }
-
-    .SIBAN_back_img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        backface-visibility:visible;
-        display: block;
-    }
-    
-    .SIBAN_back_img {
+    .SIBAN_blog_topic_info{
+        padding: 1rem;
         position: relative;
-        transform: rotateY(0deg);
+        z-index: 1;
     }
 
-    .SIBAN_event_flex{
-        display: block;
+    .SIBAN_related_blog h3{
+        font-size: 2rem;
+        padding-left: 1rem;
     }
 
-    .SIBAN_event_info{
-        margin: 1rem 0rem;
-    }
-    
-    
-    /* === VIBRANT  ===*/
-
-    .siban_experience_rap{
+    .SIBAN_blog_topic_content img{
         width: 100%;
+    }
 
-        & .SIBAN_percentage_category{
-            display: grid; 
-            grid-template-columns: 2fr 2fr; 
-            white-space: nowrap; 
-            gap: 1rem;
-        }
+    .SIBAN_blog_topic_content_2{
+        margin-top: 1rem;
+    }
+
+    .SIBAN_blog_topic_content_2 h3{
+        font-size: clamp(1rem, 4vw, 1.2rem); 
+    }
     
-        & .SIBAN_percentage_1:nth-of-type(2) {
-            border-right: none;
+
+    .SIBAN_blog_topic_content_2 p{
+        font-size: 1rem;
+    }
+
+
+
+    @media only screen and (max-width: 450px) {
+        #filterButtons {display: none}
+        #filterSelect {display: block}
+
+        #results {
+            display: block;
+            gap: 2rem;
+        }
+        
+        .filter_select {
+            margin: 0 auto;
+            width: 80%; 
+        }
+        
+        .filter_select select {
+            width: 100%;
+            padding: 5px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            outline: none;
+            transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        
+        .filter_select select:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 6px rgba(0, 123, 255, 0.5);
+        }
+        
+        .filter_btn_1 {
+            margin: 0 auto;
+            width: 50%; /* Adjust as needed */
+        }
+        
+        .filter_btn_1 input[type="search"] {
+            width: 50%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+            outline: none;
+            transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        
+        .filter_btn_1 input[type="search"]:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 6px rgba(0, 123, 255, 0.5);
         }
 
-        & .SIBAN_percentage_category {animation: none}
-        & .siban_experience_content_1 p {width: 100%;}
-        & .SIBAN_percentage_1 {padding: 5px 0px;}
 
+        /* BLOG TOPIC */
+        #blog_topic,
+        .SIBAN_blog_contents{
+            width: 100%;
+            padding: 4rem 1.3rem 0rem 1.3rem;
+        }
+
+        .SIBAN_experience_img img{
+            height: 300px;
+        }
+
+        /*===== RELATED BLOG POST ====*/        
+        .SIBAN_blog_topic_flex{
+            display: block;
+        }
+        
+        
     }
-
-    /* HOST AND MODERATOR */
-
-    .SIBAN_host_moderator_content{max-width: 100%;}
-
     
-    @keyframes marquee {
-        0% { transform: translateX(100%); } 
-        100% { transform: translateX(-100%); }
-      }
-
-
-}
-
-
-
-
-/* WE ARE COMMITTED BLOCKCHAIN ADOPTION */
-
-@keyframes blur {
-    0% {
-         filter: blur(40px);
-         opacity: 0;
-         bottom: -40px;
-    } 
-
-    100% {
-     filter: blur(0px);
-     opacity: 1;
-     bottom: 0;
-} 
- }
-
- /* WORLD BG */
- @keyframes zoomInOut {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
