@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Basic Page Needs ================================================== -->
+        <meta charset="utf-8">
+        <title> Books Store </title>
+      
+        <!-- Mobile Specific Metas
+        ================================================== -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="Siban">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+        <meta name="owner" content="Siban Store">
+        <meta name="generator" content="Check our SIBAN Store to get you books">
+      
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="images/logo/favicon.png" />
+        
+        <!-- PLUGINS CSS STYLE -->
+        <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css">
+        <link rel="stylesheet" href="plugins/slick/slick.css">
+        <link rel="stylesheet" href="plugins/slick/slick-theme.css">
+        <link rel="stylesheet" href="plugins/fancybox/jquery.fancybox.min.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <!-- CUSTOM CSS -->
+        <link href="css/style.css" rel="stylesheet">
+
+      </head>
+
+<body>
+  
+    <header>
+        <nav class="siban_header" id="SIBAN_store_menu" style="background-color: #fff;">
+            <div class="siban_header_image">
+              <a href="index.html"><img src="images/logo/Logo_black.png" alt="siban_logo"></a>
+            </div>
+          
+            <!-- Menu Bar -->
+            <ul class="menu">
+              <li><a style="color: #000;" href="../index.html" data-aos="fade-up">Home</a></li>
+              <li><a style="color: #000;" href="../about.html" data-aos="fade-up">About</a></li>
+              <li><a style="color: #000;"  href="../membership.html" data-aos="fade-up" data-aos-delay="200">Membership</a></li>
+              <li><a style="color: #000;" href="../event_gallery.html" data-aos="fade-up" data-aos-delay="300">Event Gallery</a></li>
+              <li><a style="color: #000;" href="../ecosystem.html" data-aos="fade-up" data-aos-delay="300">SIBAN Ecosystem</a></li>
+
+
+               <!-- New unordered list for "Get Started" -->
+               <ul class="menu_1" data-aos="fade-in" data-aos-delay="700">
+                   <li><a href="store.html">Store <i class="fa fa-store"></i></a></li>
+                   <li><a href="free_audit.html">Free Audit <i class="fa fa-arrow-right"></i></a></li>
+               </ul>
+               
+            </ul>
+          
+            <div class="mobile-menu" onclick="toggleMenu()" data-aos="fade-up" data-aos-delay="400" id="mobile_about">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </nav>
+
+
+          <section class="SIBAN_store section-p1">
+
+                <div class="SIBAN_merchandise_books_cart">
+                    <a href="store.html">Merchandise</a>
+                    <a style="color: #0073D7; font-weight: 600;" href="books.html">Books</a>
+                    <a href="cart.html"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart</a>
+                </div>
+
+                <div class="SIBAN_body_store" id="SIBAN_store_result">
+                    <div class="SIBAN_body_store_flex">
+                        <div class="SIBAN_body_store_left">
+                              <h3>Lifesytle</h3>
+
+                              <div class="filter_btn_1" id="filter_search">
+                                <input type="search" id="storeSearchBar" onkeyup="storeSearch()" placeholder="Search..."> 
+                              </div>
+
+                            <div class="SIBAN_body_store_filter"  id="SIBAN_store_filter">
+                                <div class="filter_btn" id="filterButtons">
+                                  <button onclick="toggleTechnology('tshirts')">T-shirts</button> <br>
+                                  <button onclick="toggleTechnology('hoodies')">Hoodies</button> <br>
+                                  <button onclick="toggleTechnology('hats')">Hats</button> <br>
+                                  <button onclick="toggleTechnology('LogosandSlogans')">Logos and Slogans</button>
+                              </div>
+
+                          </div>
+
+                      </div>
+
+                      <div class="SIBAN_store_shop">
+                        <div class="SIBAN_body_store_right" id="SIBAN_store_results">
+                            <!-- 1 -->
+                            <div class="pro tshirts">
+                              <img src="images/cart/books_1.png" alt="">
+                              <div class="des">
+                                  <div class="des_amount">
+                                      <b>Flight to Quality</b>
+                                      <h3><span>$</span>95.00 </h3>
+                                  </div>
+                                  <h5>Paperback</h5>
+                                  <div class="star">
+                                      <i class="fas fa-star"></i>
+                                      <i class="fas fa-star"></i>
+                                      <i class="fas fa-star"></i>
+                                      <i class="fas fa-star"></i>
+                                      <i class="fas fa-star"></i>        
+                                  </div>
+                                  <div class="add_to_cart">
+                                    <a href="#"><i class="fa fa-shopping-cart"></i> Add to Cart </a>
+                                </div>
+                              </div>
+                          </div>
+  
+                            <!-- 2 -->
+                            <div class="pro hats">
+                              <img src="images/cart/books_2.png" alt="">
+                              <div class="des">
+                                    <div class="des_amount">
+                                      <b>Core Concepts and Implementations</b>
+                                      <h3><span>$</span>78.00 </h3>
+                                  </div>
+                                  <h5>Cartoon Astronaut</h5>
+                                  <div class="star">
+                                      <i class="fas fa-star"></i>
+                                      <i class="fas fa-star"></i>
+                                      <i class="fas fa-star"></i>
+                                      <i class="fas fa-star"></i>
+                                      <i class="fas fa-star"></i>        
+                                  </div>
+                                  <div class="add_to_cart">
+                                    <a href="#"><i class="fa fa-shopping-cart"></i> Add to Cart </a>
+                                </div>
+                              </div>
+                          </div>
+  
+                            <!-- 3 -->
+                            <div class="pro hoodies">
+                              <img src="images/cart/books_3.png" alt="">
+                              <div class="des">
+                                    <div class="des_amount">
+                                      <b>Core Concepts and Implementations</b>
+                                      <h3><span>$</span>178.00 </h3>
+                                  </div>
+                                  <h5>Cartoon Astronaut</h5>
+                                  <div class="star">
+                                      <i class="fas fa-star"></i>
+                                      <i class="fas fa-star"></i>
+                                      <i class="fas fa-star"></i>
+                                      <i class="fas fa-star"></i>
+                                      <i class="fas fa-star"></i>        
+                                  </div>
+                                  <div class="add_to_cart">
+                                      <a href="#"><i class="fa fa-shopping-cart"></i> Add to Cart </a>
+                                  </div>
+                              </div>
+                          </div>
+  
+                          <!-- 4 -->
+                          <div class="pro LogosandSlogans ">
+                            <img src="images/cart/books_2.png" alt="">
+                            <div class="des">
+                              <div class="des_amount">
+                                  <b>Nations Book</b>
+                                  <h3><span>$</span>78.00 </h3>
+                              </div>
+                              <h5>Cartoon Astronaut</h5>
+                              <div class="star">
+                                  <i class="fas fa-star"></i>
+                                  <i class="fas fa-star"></i>
+                                  <i class="fas fa-star"></i>
+                                  <i class="fas fa-star"></i>
+                                  <i class="fas fa-star"></i>        
+                              </div>
+                              <div class="add_to_cart">
+                                <a href="#"><i class="fa fa-shopping-cart"></i> Add to Cart </a>
+                            </div>
+                          </div>
+  
+                          
+                        </div>
+                                                
+  
+                      </div>
+
+                      <div class="pagination_blog" id="pagination">
+                        <button onclick="prevStorePage()"><i class="fas fa-chevron-left"></i> Previous</button>
+                        <span id="pagination-buttons-store"></span>
+                        <button onclick="nextStorePage()"> Next <i class="fas fa-chevron-right"></i></button>
+                    </div>
+
+                  <div id="searchStoreMessages" style="display: none; color: red;">Search not available</div>
+
+                      </div>
+
+                    
+                  
+                  </div>
+
+              </div>
+        </section>
+
+ </header>
+
+
+        
+        
+      <footer >
+          <div class="footer_siban section-p1" id="footer_siban">
+              <!-- NEWSLETTER -->
+              <div class="newsletter_siban section-m1">
+                  <div class="newsletter_siban_info">
+                      <h4>Join Our newsletter</h4>
+                      <p>Get all the latest SIBAN news delivered to your inbox</p>
+                  </div>
+                  <div class="newsletter_siban_input">
+                      <input type="text" placeholder="Email address">
+                      <button class="normal">Subscribe</button>
+                  </div>
+              </div>
+
+              <!-- FOOTER -->
+              <div class="SIBAN_footer" >
+                  <div class="SIBAN_footer_flex">
+                    <!-- Number One -->
+                      <div class="SIBAN_footer_link">
+                          <p>Product</p>
+                          <ul class="SIBAN_footer_li">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="membership.html">Membership Gallery</a></li>
+                          </ul>
+                      </div>
+
+                      <!-- Number Two -->
+                      <div class="SIBAN_footer_link">
+                        <p>Community</p>
+                        <ul class="SIBAN_footer_li">
+                          <li><a href="team.html">Team</a></li>
+                          <li><a href="gallery.html">Event Gallery</a></li>
+                          <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Number Three -->
+                    <div class="SIBAN_footer_link">
+                      <p>Learn</p>
+                      <ul class="SIBAN_footer_li">
+                        <li><a href="blog/blog.html">Blog</a></li>
+                        <li><a href="award.html">Award</a></li>
+                        <li><a href="success.html">Success Stories</a></li>
+                      </ul>
+                  </div>
+
+                  <!-- Number Four -->
+                  <div class="SIBAN_footer_link">
+                    <p>Use Cases</p>
+                    <ul class="SIBAN_footer_li">
+                      <li><a href="Vission.html">Vission</a></li>
+                      <li><a href="mission.html">Mission</a></li>
+                      <li><a href="objective.html">Objective</a></li>
+                    </ul>
+                </div>
+
+
+                  </div>
+                
+                  <!-- FOOTER BOTTOM -->
+                  <div class="SIBAN_footer_bottom">
+                    <div class="SIBAN_footer_bottom_flex">
+                        <div class="SIBAN_footer_bottom_logo">
+                            <img src="images/logo/Logo.png" alt="">
+                            <p id="copyright"> </p>
+                            <p>STAKEHOLDERS IN BLOCKCHAIN <br> ASSOCIATION OF NIGERIA</p>
+                        </div>
+                        <div class="SIBAN_footer_bottom_social_link">
+                            <!-- Social Media Links -->
+                            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        </div>
+                      </div>
+                      <div class="SIBAN_footer_link">
+                          <ul class="SIBAN_footer_li">
+                            <li><a href="index.html">Terms of Service</a></li>
+                            <li><a href="about.html">Privacy Policy</a></li>
+                            <li><a href="membership.html">Security</a></li>
+                          </ul>
+                    </div>
+                </div>
+
+              </div>
+
+          </div>
+      </footer>  
+
+    
+    
+    
+    
+  <script src="js/script.js"></script>
+    <!-- Counter -->
+  <script src="lib/wow/wow.min.js"></script>
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
+
+      <script>
+
+        function toggleTechnology(proType){
+            var pro = document.querySelectorAll('.pro');
+
+            for(var i=0; i < pro.length; i++){
+                if(pro[i].classList.contains(proType)){
+                    pro[i].style.display = 'block';
+                } else{
+                  pro[i].style.display = 'none';
+                }
+            }
+        }
+
+        // STRORE SEARCH 
+        function storeSearch(){
+
+          // Variable declaration 
+          var input, storeFilter, searchResults, pro, title, i;
+
+          input = document.getElementById('storeSearchBar');
+          storeFilter = input.value.toUpperCase();
+          searchResults = document.getElementById('SIBAN_store_results');
+          pro = searchResults.getElementsByClassName('pro');
+          found = false;
+
+          // Loop through all pro divs, and hide those who don't match the search query
+          for(var i = 0; i < pro.length; i++) {
+              title = pro[i].getElementsByClassName('des_amount')[0].getElementsByTagName('b')[0];
+
+              if(title){
+                  if(title.innerHTML.toUpperCase().indexOf(storeFilter) > -1){
+                      pro[i].style.display = 'block';
+                      found = true;
+                    } 
+                  else {
+                    pro[i].style.display = 'none';
+                  }
+              }
+
+                  // document.getElementById('nextBtn').disabled = true; 
+                  // itemsPerPage = 8; 
+                  // currentPage = 1; 
+                  // totalPages = Math.ceil(document.querySelectorAll('.technology.' + techType).length / itemsPerPage); // Recalculate total pages based on filtered technologies
+                  // displayPage(currentPage); 
+          }
+
+
+          // Message display
+          var searchStoreMessages = document.getElementById('searchStoreMessages');
+          if(!found){
+            searchStoreMessages.style.display = 'block';
+          } 
+          else{
+            searchStoreMessages.style.display = 'none';
+          }
+
+        }
+
+
+        // Pagination variables
+        var currentPage = 1;
+        var itemsPerPage = 6; // Display 6 items initially
+        var technologies = document.getElementsByClassName('pro');
+        var totalPages = Math.ceil(technologies.length / itemsPerPage);
+
+        // Function to generate pagination buttons
+        function generatePaginationButtons() {
+            var paginationButtons = document.getElementById('pagination-buttons-store');
+            paginationButtons.innerHTML = ''; // Clear previous buttons
+            for (var i = 1; i <= totalPages; i++) {
+                var button = document.createElement('button');
+                button.innerText = i;
+                button.onclick = function() {
+                    displayPage(this.innerText); // Set the page to display when clicked
+                };
+                paginationButtons.appendChild(button);
+            }
+        }
+
+        // Function to display current page
+        function displayPage(page) {
+            currentPage = parseInt(page); // Convert to integer
+            var startIndex = (currentPage - 1) * itemsPerPage;
+            var endIndex = Math.min(startIndex + itemsPerPage, technologies.length);
+            for (var i = 0; i < technologies.length; i++) {
+                if (i >= startIndex && i < endIndex) {
+                    technologies[i].style.display = 'block';
+                } else {
+                    technologies[i].style.display = 'none';
+                }
+            }
+            // Disable next button if on the last page
+            document.getElementById('nextBtn').disabled = currentPage === totalPages;
+        }
+
+        // Function to display previous page
+        function prevStorePage() {
+            if (currentPage > 1) {
+                currentPage--;
+                displayPage(currentPage);
+            }
+        }
+
+        // Function to display next page
+        function nextStorePage() {
+            if (currentPage < totalPages) {
+                currentPage++;
+                displayPage(currentPage);
+            }
+        }
+
+        // Initial setup
+        generatePaginationButtons();
+        displayPage(currentPage);
+
+
+
+
+
+
+
+      </script>
+
+
+</body>
+</html>

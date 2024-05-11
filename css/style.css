@@ -71,6 +71,8 @@
     
     .siban_header{
         position: sticky;
+        /* position: fixed;
+        width: 100%; */
         top: 0;
         z-index: calc(10000);
         background-color: #0073D7;
@@ -97,8 +99,6 @@
         color: #fff;
     }
 
-
-
     .siban_header_image a {
         color: #fff;
         font-weight: bold;
@@ -113,7 +113,7 @@
         padding: 0;
     }
 
-    .menu .menu_1, li a {
+    .menu li a {
         font-weight: 500;
         margin-right: 1rem;
         text-decoration: none;
@@ -124,10 +124,10 @@
         margin-right: 20px;
     }
 
-    .menu li a:visited {
+    /* .menu li a:visited {
         color: #0073D7; 
         text-decoration: none; 
-    }
+    } */
 
     .menu li a:hover {
         color: #4da8ff; 
@@ -1244,6 +1244,370 @@
         justify-content: center;
         margin-top: 2rem;
       }
+
+
+    /* SIBAN STORE */
+    #SIBAN_store_menu .menu_1 li a{
+        color: #fff;
+        background-color: #0073D7;
+        padding: .7rem 1.5rem;
+        border: 1.4px solid #fff;
+        border-radius: .5rem;
+    }
+
+    .SIBAN_merchandise_books_cart a {
+        text-decoration: none;
+        color: #000; 
+        margin-right: 20px;
+    }
+
+    .SIBAN_merchandise_books_cart a.active {
+        color: #0073D7; /* Active link color */
+        font-weight: bold; /* Optionally, make the active link bold */
+    }
+
+    #SIBAN_store_menu .menu_1 li:nth-child(1) a{
+        color: #0073D7;
+        background-color: #fff;
+        border: 1.4px solid #0073D7;
+    }
+
+    .SIBAN_body_store_flex{
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        margin-top: 2rem;
+        /* gap: 3; */
+    }
+
+    .SIBAN_body_store_right{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 1rem;
+    }
+
+    #SIBAN_store_filter button {
+        padding: 12px 0px;
+        width: 90%;
+        font-size: 14px;
+        background-color: transparent;
+        color: #808080;
+        border: none;
+        border-bottom: 1px solid #808080;
+        cursor: pointer;
+        text-align: left;
+    }
+
+    #storeSearchBar {
+        padding: 8px;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        width: 200px;
+    }
+
+    .SIBAN_body_store_left .filter_btn_1 {
+        padding: 1.2rem 0rem;
+    }
+    
+   #filter_search_btn input[type="search"] {
+        width: 90%;
+        padding: 8px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #fff;
+        outline: none;
+        transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+    
+    #filter_search_btn input[type="search"]:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 6px rgba(0, 123, 255, 0.5);
+    }
+
+    
+    .des_amount{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .pro img{
+        width: 100%;
+    }
+
+    .pro b{
+        font-size: clamp(15px, 5vw, 1rem);
+    }
+
+    .pro h3{
+        font-size: clamp(10px, 5vw, 1.2rem);
+    }
+
+    .pro h3 span{
+        font-size: .8rem;
+    }
+
+    .des h5{
+        color: #808080;
+        font-weight: 200;
+        padding: 3px 0px;
+    }
+
+    .des .star {
+        color: var(--main-color);
+        font-weight: 200;
+        padding: 3px 0px;
+    }
+
+    .add_to_cart {
+        display: inline-block;
+        margin-top: 10px;
+    }
+    
+    .add_to_cart a {
+        display: flex;
+        align-items: center;
+        font-size: .8rem;
+        font-weight: 600;
+        text-decoration: none;
+        color: #333;
+        background-color: #f0f0f0;
+        padding: 8px 12px;
+        border-radius: 10px;
+        transition: background-color 0.3s ease;
+    }
+    
+    .add_to_cart a:hover {
+        background-color: #ddd; 
+    }
+    
+    .add_to_cart a i {
+        margin-right: 5px;
+        color: var(--main-color);
+    }
+    
+
+    /* PAGINATION IN UPCOMING EVENT */
+
+    .pagination_blog {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .pagination_blog .pageNumber {
+        cursor: pointer;
+    }
+
+    .pagination_blog button {
+        padding: 10px 20px;
+        margin-right: 10px;
+        background-color: #0073D7;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    .pagination_blog button:hover {
+        background-color: #005DAE;
+    }
+    
+    #pageNumbers span {
+        display: inline-block;
+        padding: 5px 10px;
+        margin-right: 5px;
+        background-color: #0073D7;
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    #pageNumbers span:hover {
+        background-color: #005DAE;
+    }
+    
+    #pageNumbers .active {
+        background-color: #005DAE;
+    }
+
+    .pagination-blog .pagination-buttons button{
+        background-color: red;
+    }
+
+
+
+    /* SINGLE PRODUCT */
+    #prodetails{
+        display: flex;
+        margin-top: 20px;
+    }
+
+    #prodetails .single-pro-details{
+        width: 40%;
+        padding-top: 0px;
+    } 
+
+    .single-pro-1{
+        border-bottom: 1px solid #667185;
+    }
+
+    .single-pro-1:nth-of-type(4){
+        border-bottom: none;
+    }
+
+    .single-pro-1 h2:nth-of-type(2){
+        padding: 1rem 0rem;
+    }
+
+    .single-pro-1 p{
+        font-size: 1rem;
+        color: #667185;
+        text-align: justify;
+        line-height: 20px;
+    }
+
+    .single-pro-1 .star{
+        color: #0073D7;
+    }
+
+    .single-pro-1_flex{
+        display: flex;
+        align-items: center;
+    }
+
+    .single_quantity_content p{
+       font-size: .8rem;
+    }
+    
+    #single_quantity p{
+        margin: 0; 
+    }
+
+    .pagination_blog {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .pagination_blog .pageNumber {
+        cursor: pointer;
+    }
+
+    .single-pro-1 button {
+        padding: 20px 30px;
+        margin: 20px 0px;
+        margin-right: 10px;
+        background-color: #0073D7;
+        color: #fff;
+        border: none;
+        border-radius: 2rem;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    .single-pro-1 button:hover {
+        background-color: #005DAE;
+    }
+
+    .single-pro-delivery{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem;
+        border: 1px solid #667185;
+        border-radius: .5rem;
+    }
+
+    .single-pro-delivery i{
+        color: #0073D7;
+    }
+
+    .single_delivery_content h3,
+    .single_delivery_content p {
+        margin-bottom: 0; 
+        padding: 0;
+        line-height: 1px;
+        font-size: clamp(10px, 3vw, 1rem);
+    }
+
+    .single_delivery_content p {
+        color: #667185;
+    }
+    
+    #pageNumbers span {
+        display: inline-block;
+        padding: 5px 10px;
+        margin-right: 5px;
+        background-color: #0073D7;
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    #prodetails .single-pro-image{
+        width: 40%;
+        margin-right: 30px;
+    }
+
+    .small-img-group{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .small-img-col{
+        flex-basis: 24%;
+        cursor: pointer;
+    }
+
+    #prodetails .single-pro-details h4{
+        padding: 40px 0 20px 0;
+    } 
+
+    #prodetails .single-pro-details h2{
+        font-size: clamp(1rem, 5vw, 26px);
+        line-height: 20px;
+    } 
+
+    #prodetails .single-pro-details select{
+        display: block;
+        padding: 5px 10px;
+        margin-bottom: 10px;
+    } 
+
+    #prodetails .single-pro-details input{
+        width: 40px;
+        height: 40px;
+        padding-left: 10px;
+        font-size: 16px;
+        margin-right: 10px;
+    } 
+
+    #prodetails .single-pro-details input:focus{
+        outline: none;
+    } 
+
+    #prodetails .single-pro-details span{
+        line-height: 25px;
+        text-align: justify;
+    }
+
+    /* .SIBAN_store_shop h3{
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    } */
+
+
+
+
+
+
+
+
     
     
     
@@ -1272,6 +1636,7 @@
     /* Footer Styles */
     .footer_siban {
         color: #fff;
+        z-index: -1;
     }
 
     .get_in_touch {
@@ -1363,7 +1728,25 @@
     }
 
 
-   /*== NEWSLETTER  === */
+    #footer_siban h4, button{
+        color: #000;
+    }
+
+    #footer_siban .SIBAN_footer_li li a {
+        color: #000;
+        text-decoration: none;
+        line-height: 2;
+    }
+
+    #footer_siban .SIBAN_footer_link p {
+        font-weight: bold;
+        color: #000;
+        line-height: 0;
+    }
+
+
+   
+    /*== NEWSLETTER  === */
     .newsletter_siban {
         display: flex;
         align-items: center;
@@ -1405,7 +1788,8 @@
             border-radius: 4px;
             border-top-right-radius: 0;
             border-bottom-right-radius: 0;
-            outline: none;  
+            outline: none;
+            /* text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);  */  
         }
 
         & button{
@@ -1425,6 +1809,35 @@
             background-color: #005ea8;
         }
     }
+
+    /* Footer on Store*/
+    #footer_siban p{
+        color: #000;
+    }
+
+    #footer_siban .SIBAN_footer_li li a {
+        color: #667185;
+    }
+
+    #footer_siban .SIBAN_footer_link p {
+        color: #667185;
+    }
+
+    #footer_siban input[type="text"] {
+        border: 1px solid #ccc;
+    }
+
+    #footer_siban .SIBAN_footer_bottom_logo p {
+        color: #667185;
+    }
+
+    #footer_siban .SIBAN_footer_bottom_social_link .social-icon {
+        background-color: var(--main-color);
+        color: #fff;
+    }
+
+  
+
 
     /*== FOOTER STYLING  == */
     .SIBAN_footer_flex {
@@ -1459,7 +1872,7 @@
     }
 
     .SIBAN_footer_li li a {
-        /* color: #333; */
+        color: #fff;
         text-decoration: none;
         line-height: 2;
     }
@@ -1531,6 +1944,7 @@
     }
     
     #mobile_about span {background-color: var(--secondary-color)}
+    /* #menu_store span {background-color: var(--secondary-color)} */
     .menu.active {display: flex}
     .mobile-menu {
         margin-top: .8rem;
@@ -1617,12 +2031,12 @@
     .SIBAN_transparency_content p{font-size: 1rem}
     .SIBAN_blockchain_content_2 h3{font-size: 1.2rem}
 
-     /* =============== EXPLORE OUR PROJECTS ============== */
+     /* ========= EXPLORE OUR PROJECTS ======== */
      .SIBAN_explore_content{
         max-width: 90%;
     }
 
-     /* =============== SIBAN BLOCKCHAIN EDUCATION INITIATIVES ============== */
+     /* ====== SIBAN BLOCKCHAIN EDUCATION INITIATIVES ==== */
     .SIBAN_blockchain_edu{margin-top: 1rem}
     .SIBAN_blockchain_info{padding: 0rem}
     .SIBAN_blockchain_content_1 h4{font-size: 1rem}
@@ -1630,41 +2044,13 @@
     .SIBAN_blockchain_content_1::before{top: 5}
     .SIBAN_blockchain_flex{gap: 2rem}
 
-
-    /* =============== SIBAN ECOSYSTEM ============== */   
-    /* .siban_ecosystem{
-        color: #fff;
-        height: 600px;
-    } */
-
-    /* .siban_ecosystem_rap{
-        width: 100%;
-    } */
-
-    /* .SIBAN_ecosystem_img img{
-        width: 100%;
-        display: none;
-    } */
-
-    /* .siban_ecosystem_rap{
-        padding-top: 15rem;
-    } */
-    
-    /* .siban_ecosystem_content_1 h2 {
-        font-size: clamp(1rem, 9vw, 7rem); 
-        line-height: 1.2;
-        font-weight: 300;
-    } */
-
     .siban_ecosystem_content_1 p {width: 100%;}
     .SIBAN_swipe_content{padding: 1rem;}
     .SIBAN_swipe_flex{display: block;}
-
-
     
 
 
-    /* =============== BECOME A CORPORATE MEMBER ============== */
+    /* ====== BECOME A CORPORATE MEMBER ======== */
     .SIBAN_corporate{
         background-color: #0073D7;
         padding: 6rem 0rem;
@@ -1717,8 +2103,33 @@
         line-height: 15px;
         font-size: 12px;
     }
+
+    .SIBAN_body_store_flex{
+        display: block;
+    }
+
+    .SIBAN_body_store_right{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 1rem;
+    }
     
 
+     /* SINGLE PRODUCT */
+     #prodetails{
+        display: block;
+        margin-top: 20px;
+    }
+
+    #prodetails .single-pro-details{
+        width: 100%;
+        padding-top: 0px;
+    } 
+
+    #prodetails .single-pro-image{
+        width: 100%;
+        margin-right: 30px;
+    }
 }
 
 
@@ -1728,7 +2139,7 @@
     .menu_1 li a{padding: .8rem}
     nav .menu_1{display: none}
 
-     /*=================== GET IN TOUCH ================ */
+     /*=========== GET IN TOUCH ========== */
      .get_in_touch_input button {
         margin-top: 1rem;
         border-radius: 2rem;
@@ -1797,7 +2208,7 @@
     .SIBAN_faq .SIBAN_bUTTON .menu_1 li:nth-of-type(1),
     .SIBAN_leadership .SIBAN_bUTTON .menu_1 li:nth-of-type(1) {
     background-color: #fff;
-}
+    }
 
     .SIBAN_bUTTON .menu_1 li a{
         background-color: transparent;
@@ -1806,14 +2217,6 @@
 
 
     .menu_1 li{margin: 1rem 0rem}
-    /* .menu_1 li:nth-of-type(1) a{
-        padding: 1rem 8rem;
-        border-radius: 60px;
-    } */
-    /* .SIBAN_our_mission .menu_1 li:nth-of-type(1) a{padding: 1rem 7rem}
-    .SIBAN_explore_projects .SIBAN_bUTTON .menu_1 li a{padding: 1rem 4.7rem}
-    .SIBAN_faq .SIBAN_bUTTON .menu_1 li a{padding: 1rem 4.5rem}
-    .SIBAN_leadership .SIBAN_bUTTON .menu_1 li a{padding: 1rem 2.5rem} */
 
     .menu_1 li:nth-of-type(2) a{
         padding: 1rem 5rem;
@@ -1863,7 +2266,6 @@
     .SIBAN_explore_content{max-width: 100%}
     .SIBAN_explore_content p{font-size: 15px; padding: 0rem 1rem;}
     .SIBAN_explore_content h3{font-size: 24px;}
-    /* .SIBAN_our_mission_content p{text-align: justify} */
     .SIBAN_rules_flex{display: block}
     .SIBAN_HEADING {
         color: #fff;
@@ -1895,7 +2297,7 @@
     #SIBAN_team .SIBAN_our_mission_content{max-width: 100%}
 
 
-    /* =============== TRANSPARENCY ============== */
+    /* ========= TRANSPARENCY ======== */
     .SIBAN_transparency{
         padding: 6rem 0rem;
     }
@@ -1934,7 +2336,7 @@
         }
 
       
-    /* =============== SIBAN BLOCKCHAIN EDUCATION INITIATIVES ============== */   
+    /* ======== SIBAN BLOCKCHAIN EDUCATION INITIATIVES ======== */   
     .SIBAN_blockchain_info{padding-top: 2rem}
     .SIBAN_blockchain_content_1{top: 160px}
     .SIBAN_blockchain_content_2 a{font-style: italic;}
@@ -1944,13 +2346,13 @@
     }
     
 
-    /* =============== FAQ ============== */   
+    /* ======= FAQ ========= */   
     .SIBAN_faq_header p{font-size: 14px;}
     .SIBAN_faq_search input[type="text"] {width: 100%}
     .search-icon {left: 20px}
 
 
-    /* =============== BECOME A CORPORATE MEMBER ============== */
+    /* ======== BECOME A CORPORATE MEMBER ========= */
     .SIBAN_corporate{
         background-color: #0073D7;
         padding: 4rem 0rem;
@@ -1988,9 +2390,6 @@
         height: 100px;
         transform: rotate(173deg); 
     }
-
-
-
 
       
     /*======= FOOTER STYLING  ====== */

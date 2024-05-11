@@ -1,36 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <!-- Basic Page Needs
-        ================================================== -->
-        <meta charset="utf-8">
-        <title> SIBAN BLOG</title>
-      
-        <!-- Mobile Specific Metas
-        ================================================== -->
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="description" content="Siban">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-        <meta name="owner" content="Siban">
-        <meta name="generator" content="SIBAN BLOG">
-      
-        <!-- Favicon -->
-        <link rel="shortcut icon" type="image/x-icon" href="blog_img/logo/favicon.png" />
-        
-        <!-- PLUGINS CSS STYLE -->
-        <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css">
-        <link rel="stylesheet" href="plugins/slick/slick.css">
-        <link rel="stylesheet" href="plugins/slick/slick-theme.css">
-        <link rel="stylesheet" href="plugins/fancybox/jquery.fancybox.min.css">
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title> SIBAN BLOG</title>
+    
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Siban">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="owner" content="Siban">
+    <meta name="generator" content="SIBAN BLOG">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="blog_img/logo/favicon.png" />
+    
+    <!-- PLUGINS CSS STYLE -->
+    <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="plugins/slick/slick.css">
+    <link rel="stylesheet" href="plugins/slick/slick-theme.css">
+    <link rel="stylesheet" href="plugins/fancybox/jquery.fancybox.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
         
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-        <!-- CUSTOM CSS -->
-        <link href="blog.css" rel="stylesheet">
-        <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- CUSTOM CSS -->
+    <link href="blog.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
 
-      </head>
+    </head>
 
 <body>
   
@@ -47,21 +47,11 @@
                 <li><a style="color: #dde7f0"  href="../membership.html" data-aos="fade-up" data-aos-delay="200">Membership</a></li>
                 <li><a style="color: #dde7f0" href="../event_gallery.html" data-aos="fade-up" data-aos-delay="300">Event Gallery</a></li>
                 <li><a style="color: #dde7f0" href="../ecosystem.html" data-aos="fade-up" data-aos-delay="300">SIBAN Ecosystem</a></li>
-              
-              <!-- Free Consultation Dropdown -->
-              <!-- <li>
-                <a href="#" class="toggle-dropdown">SIBAN ECOSYSTEM <i class="fa fa-angle-down"></i></a>
-                <ul class="submenu">
-                    <li><a href="getstarted.html">Consultation 1</a></li>
-                    <li><a href="consultation.html">Consultation 2</a></li>
-                </ul>
-            </li> -->
-
 
                <!-- New unordered list for "Get Started" -->
                <ul class="menu_1" data-aos="fade-in" data-aos-delay="700">
-                   <li><a href="store.html">Store</a></li>
-                   <li><a href="consultation.html">Free Consultation</a></li>
+                   <li><a href="../store.html">Store</a></li>
+                   <li><a href="../free_consultation.html">Free Consultation</a></li>
                </ul>
                
             </ul>
@@ -363,8 +353,8 @@
                       <!-- New unordered list for "Get Started" -->
                       <div class="SIBAN_bUTTON">
                           <ul class="menu_1">
-                            <li><a href="store.html">Store </a></li>
-                            <li><a href="consultation.html">Free Consultation</a></li>
+                            <li><a href="../store.html">Store </a></li>
+                            <li><a href="../free_consultation.html">Free Consultation</a></li>
                         </ul>
                       </div>
                 </div>
@@ -514,115 +504,114 @@
 
 <script>// JavaScript for filtering and pagination
 
-// Function to show all technologies
-function showAll() {
-    var technologies = document.getElementsByClassName('technology');
-    for (var i = 0; i < technologies.length; i++) {
-        if (i < 6) {
-            technologies[i].style.display = 'block';
-        } else {
-            technologies[i].style.display = 'none';
+        // Function to show all technologies
+        function showAll() {
+            var technologies = document.getElementsByClassName('technology');
+            for (var i = 0; i < technologies.length; i++) {
+                if (i < 6) {
+                    technologies[i].style.display = 'block';
+                } else {
+                    technologies[i].style.display = 'none';
+                }
+            }
+            document.getElementById('nextBtn').disabled = true; // Disable next button
+            itemsPerPage = 8; // Display 8 items when "View All" is active
+            currentPage = 1; // Reset current page to 1
+            totalPages = Math.ceil(technologies.length / itemsPerPage); // Recalculate total pages
+            displayPage(currentPage); // Display the first page
+            viewAllAfterFilter = false; // Reset the flag
         }
-    }
-    document.getElementById('nextBtn').disabled = true; // Disable next button
-    itemsPerPage = 8; // Display 8 items when "View All" is active
-    currentPage = 1; // Reset current page to 1
-    totalPages = Math.ceil(technologies.length / itemsPerPage); // Recalculate total pages
-    displayPage(currentPage); // Display the first page
-    viewAllAfterFilter = false; // Reset the flag
-}
 
 
-// Function to toggle display based on technology type
-function toggleTechnology(techType) {
-    var technologies = document.getElementsByClassName('technology');
-    for (var i = 0; i < technologies.length; i++) {
-        if (technologies[i].classList.contains(techType)) {
-            technologies[i].style.display = 'block';
-        } else {
-            technologies[i].style.display = 'none';
+        // Function to toggle display based on technology type
+        function toggleTechnology(techType) {
+            var technologies = document.getElementsByClassName('technology');
+            for (var i = 0; i < technologies.length; i++) {
+                if (technologies[i].classList.contains(techType)) {
+                    technologies[i].style.display = 'block';
+                } else {
+                    technologies[i].style.display = 'none';
+                }
+            }
+            document.getElementById('nextBtn').disabled = true; // Disable next button
+            itemsPerPage = 8; // Display 8 items when filter is active
+            currentPage = 1; // Reset current page to 1
+            totalPages = Math.ceil(document.querySelectorAll('.technology.' + techType).length / itemsPerPage); // Recalculate total pages based on filtered technologies
+            displayPage(currentPage); // Display the first page
+            viewAllAfterFilter = true; // Set the flag
         }
-    }
-    document.getElementById('nextBtn').disabled = true; // Disable next button
-    itemsPerPage = 8; // Display 8 items when filter is active
-    currentPage = 1; // Reset current page to 1
-    totalPages = Math.ceil(document.querySelectorAll('.technology.' + techType).length / itemsPerPage); // Recalculate total pages based on filtered technologies
-    displayPage(currentPage); // Display the first page
-    viewAllAfterFilter = true; // Set the flag
-}
 
-// Function to handle the "View All" button click
-function viewAllClick() {
-    if (viewAllAfterFilter) {
-        // If "View All" was clicked after a filter, apply the filter's behavior
-        showAll();
-    } else {
-        // Otherwise, behave as usual for "View All"
-        toggleTechnology(''); // Show all technologies
-    }
-}
-
-
-// Pagination variables
-// Pagination variables
-var currentPage = 1;
-var itemsPerPage = 6; // Display 6 items initially
-var technologies = document.getElementsByClassName('technology');
-var totalPages = Math.ceil(technologies.length / itemsPerPage);
-
-// Function to generate pagination buttons
-function generatePaginationButtons() {
-    var paginationButtons = document.getElementById('pagination-buttons');
-    paginationButtons.innerHTML = ''; // Clear previous buttons
-    for (var i = 1; i <= totalPages; i++) {
-        var button = document.createElement('button');
-        button.innerText = i;
-        button.onclick = function() {
-            displayPage(this.innerText); // Set the page to display when clicked
-        };
-        paginationButtons.appendChild(button);
-    }
-}
-
-// Function to display current page
-function displayPage(page) {
-    currentPage = parseInt(page); // Convert to integer
-    var startIndex = (currentPage - 1) * itemsPerPage;
-    var endIndex = Math.min(startIndex + itemsPerPage, technologies.length);
-    for (var i = 0; i < technologies.length; i++) {
-        if (i >= startIndex && i < endIndex) {
-            technologies[i].style.display = 'block';
-        } else {
-            technologies[i].style.display = 'none';
+        // Function to handle the "View All" button click
+        function viewAllClick() {
+            if (viewAllAfterFilter) {
+                // If "View All" was clicked after a filter, apply the filter's behavior
+                showAll();
+            } else {
+                // Otherwise, behave as usual for "View All"
+                toggleTechnology(''); // Show all technologies
+            }
         }
-    }
-    // Disable next button if on the last page
-    document.getElementById('nextBtn').disabled = currentPage === totalPages;
-}
 
-// Function to display previous page
-function prevPage() {
-    if (currentPage > 1) {
-        currentPage--;
+
+        // Pagination variables
+        var currentPage = 1;
+        var itemsPerPage = 6; // Display 6 items initially
+        var technologies = document.getElementsByClassName('technology');
+        var totalPages = Math.ceil(technologies.length / itemsPerPage);
+
+        // Function to generate pagination buttons
+        function generatePaginationButtons() {
+            var paginationButtons = document.getElementById('pagination-buttons');
+            paginationButtons.innerHTML = ''; // Clear previous buttons
+            for (var i = 1; i <= totalPages; i++) {
+                var button = document.createElement('button');
+                button.innerText = i;
+                button.onclick = function() {
+                    displayPage(this.innerText); // Set the page to display when clicked
+                };
+                paginationButtons.appendChild(button);
+            }
+        }
+
+        // Function to display current page
+        function displayPage(page) {
+            currentPage = parseInt(page); // Convert to integer
+            var startIndex = (currentPage - 1) * itemsPerPage;
+            var endIndex = Math.min(startIndex + itemsPerPage, technologies.length);
+            for (var i = 0; i < technologies.length; i++) {
+                if (i >= startIndex && i < endIndex) {
+                    technologies[i].style.display = 'block';
+                } else {
+                    technologies[i].style.display = 'none';
+                }
+            }
+            // Disable next button if on the last page
+            document.getElementById('nextBtn').disabled = currentPage === totalPages;
+        }
+
+        // Function to display previous page
+        function prevPage() {
+            if (currentPage > 1) {
+                currentPage--;
+                displayPage(currentPage);
+            }
+        }
+
+        // Function to display next page
+        function nextPage() {
+            if (currentPage < totalPages) {
+                currentPage++;
+                displayPage(currentPage);
+            }
+        }
+
+        // Initial setup
+        generatePaginationButtons();
         displayPage(currentPage);
-    }
-}
-
-// Function to display next page
-function nextPage() {
-    if (currentPage < totalPages) {
-        currentPage++;
-        displayPage(currentPage);
-    }
-}
-
-// Initial setup
-generatePaginationButtons();
-displayPage(currentPage);
 
 
 
-function filterResults() {
+        function filterResults() {
             // Declare variables
             var input, filter, results, technology, title, i, found;
             input = document.getElementById('searchBar');
@@ -653,9 +642,9 @@ function filterResults() {
             }
         }
 
-// Initial display
-generatePaginationButtons();
-displayPage(currentPage);
+        // Initial display
+        // generatePaginationButtons();
+        // displayPage(currentPage);
 
     
   </script>
